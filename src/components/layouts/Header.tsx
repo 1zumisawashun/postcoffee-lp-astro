@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
   height: 90px;
   position: fixed;
   background-color: white;
-  z-index: 1;
+  z-index: 9999;
 `;
 const StyledHeaderWrapper = styled.div`
   max-width: 1200px;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
-import { medias } from "../../../functions/constants/media";
+import { medias } from "../../../functions/constants/medias";
 import "swiper/css";
 
 SwiperCore.use([Autoplay]);
