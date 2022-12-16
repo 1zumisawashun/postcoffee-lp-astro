@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
 import { medias } from "../../../functions/constants/media";
 import "swiper/css";
+
+SwiperCore.use([Autoplay]);
 
 export const Media = () => {
   const mediaImages = () => {
@@ -10,6 +13,25 @@ export const Media = () => {
       mediaImages.push(<StyledImage src="https://placehold.jp/100x60.png" />);
     }
     return mediaImages;
+  };
+
+  const params = {
+    spaceBetween: 30,
+    slidesPerView: 1,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   };
   return (
     <MediaContainer>
@@ -22,9 +44,7 @@ export const Media = () => {
         </Subtitle>
       </MediaWrapper>
       <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        loop
+        {...params}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >

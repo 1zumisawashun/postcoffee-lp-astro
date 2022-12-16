@@ -22,4 +22,8 @@ export const Button = styled.button<{ outlined?: boolean }>`
     width: 15rem;
     padding: 1rem 0.5rem;
   }
+  &.-fullwidth {
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
 `;
