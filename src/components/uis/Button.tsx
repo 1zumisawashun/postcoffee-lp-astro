@@ -18,4 +18,8 @@ export const Button = styled.button<{ outlined?: boolean }>`
   :hover {
     opacity: 0.8;
   }
+  &.-large {
+    width: 15rem;
+    padding: 1rem 0.5rem;
+  }
 `;
