@@ -1,41 +1,98 @@
-import { useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { medias } from "../../../functions/constants/media";
+import "swiper/css";
 
-export const Template = () => {
-  const [count, setCount] = useState(0);
-
+export const Media = () => {
+  const mediaImages = () => {
+    const mediaImages = [];
+    for (let i = 0; i < 22; i++) {
+      mediaImages.push(<StyledImage src="https://placehold.jp/100x60.png" />);
+    }
+    return mediaImages;
+  };
   return (
-    <>
-      <h1>React styled-component counter</h1>
-      <div>{count}</div>
-      <div>
-        <Button onClick={() => setCount(count + 1)} primary>
-          increment
-        </Button>
-        <Button onClick={() => setCount(count - 1)}>decrement</Button>
-      </div>
-    </>
+    <MediaContainer>
+      <MediaWrapper>
+        <Maintitle>今話題のサブスク</Maintitle>
+        <Subtitle>
+          様々なテレビやメディアで
+          <br />
+          話題になっています
+        </Subtitle>
+      </MediaWrapper>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        loop
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        {medias.map((media) => {
+          return (
+            <SwiperSlide key={media.name}>
+              <Headline>{media.headline}</Headline>
+              <Text>{media.text}</Text>
+              <Line></Line>
+              <img src={media.image} alt={media.name} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+      <Medias>{mediaImages()}</Medias>
+    </MediaContainer>
   );
 };
 
-const Button = styled.button<{ primary?: boolean }>`
-  display: inline-block;
-  padding: 0.5rem 0;
-  margin: 0.5rem 1rem;
-  width: 11rem;
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-  background: black;
-  border-radius: 30px;
-  border: 1px solid black;
-  ${(props) =>
-    props.primary &&
-    css`
-      background: white;
-      color: black;
-    `}
-  :hover {
-    opacity: 0.8;
-  }
+const MediaContainer = styled.div`
+  width: 100%;
+  height: auto;
+  background-color: #f1f1f1;
+  padding: 5% 0 0;
+  text-align: center;
+`;
+
+const MediaWrapper = styled.div`
+  margin: 3%;
+`;
+const Maintitle = styled.p`
+  width: 10%;
+  margin: 2% auto;
+  font-size: 15px;
+  border-bottom: solid 1px black;
+`;
+const Subtitle = styled.p`
+  font-size: 25px;
+  font-weight: bold;
+`;
+const Medias = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  padding: 3% 0;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc((100 - 15 * 6) / 5);
+  row-gap: 20px;
+  column-gap: 20px;
+`;
+const StyledImage = styled.img`
+  width: 15%;
+`;
+const Headline = styled.p`
+  width: 100%;
+  font-size: 35px;
+  font-weight: bold;
+`;
+const Text = styled.p`
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 1% 0;
+`;
+const Line = styled.div`
+  border-right: 1px solid black;
+  width: 50%;
+  height: 50px;
+  margin: 2% 0;
 `;
