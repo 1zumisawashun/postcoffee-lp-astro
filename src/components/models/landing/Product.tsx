@@ -2,6 +2,14 @@ import styled from "styled-components";
 import PostcoffeeBox from "../../../assets/images/image_postcoffee_box.png";
 import Check from "../../../assets/images/image_check.png";
 import { Button } from "../../uis/Button";
+import { BaseText } from "../../../functions/themes/BaseText";
+import { BaseTitle } from "../../../functions/themes/BaseTitle";
+
+const PanelItems = [
+  "マグとお湯を用意するだけでOK！",
+  "縛りなしでスキップも簡単！",
+  "ずっと、全国送料無料！",
+];
 
 export const Product = () => {
   return (
@@ -11,32 +19,26 @@ export const Product = () => {
       <ProductContent>
         <Headline>あなた専用のコーヒーボックス</Headline>
 
-        <Title>
+        <BaseTitle className="-sub">
           すぐにコーヒーライフを始めるためのオールインワンボックス
           <br />
           診断から好みにあったコーヒーが3種類
-        </Title>
-        <Subtitle>
+        </BaseTitle>
+        <BaseText className="-bold">
           好みに合わせて、豆の挽き方や頻度、分量、シュガー、ミルク（クリープ）などカスタマイズ！
-        </Subtitle>
+        </BaseText>
         <Panel>
-          <PanelItem>
-            <StyledIcon src={Check} alt="" />
-            マグとお湯を用意するだけでOK！
-          </PanelItem>
-          <PanelItem>
-            <StyledIcon src={Check} alt="" />
-            縛りなしでスキップも簡単！
-          </PanelItem>
-          <PanelItem>
-            <StyledIcon src={Check} alt="" />
-            ずっと、全国送料無料！
-          </PanelItem>
+          {PanelItems.map((item) => (
+            <PanelItem>
+              <StyledIcon src={Check} alt="" />
+              {item}
+            </PanelItem>
+          ))}
         </Panel>
         <PriceWrapper>
           <Ship>送料無料</Ship>
           <ExcludingTax>¥1,480~</ExcludingTax>
-          <IncludingTax>（税込¥1,598~）</IncludingTax>
+          <BaseText>（税込¥1,598~）</BaseText>
         </PriceWrapper>
         <Button className="-fullwidth">
           1分であなた好みのコーヒー診断 <br />
@@ -65,18 +67,9 @@ const ProductContent = styled.div`
   display: grid;
   gap: 20px;
 `;
-const Headline = styled.p`
+const Headline = styled(BaseText)`
   width: fit-content;
-  font-size: 14px;
   border-bottom: 1px solid black;
-`;
-const Title = styled.p`
-  font-size: 25px;
-  font-weight: bold;
-`;
-const Subtitle = styled.p`
-  font-size: 16px;
-  font-weight: bold;
 `;
 const Panel = styled.div`
   background-color: #f1f1f1;
@@ -100,16 +93,11 @@ const PriceWrapper = styled.div`
   align-items: center;
   gap: 20px;
 `;
-const Ship = styled.p`
-  font-size: 16px;
+const Ship = styled(BaseText)`
   border: 1px solid black;
-  text-align: center;
   padding: 5px;
 `;
 const ExcludingTax = styled.p`
   font-weight: bold;
   font-size: 40px;
-`;
-const IncludingTax = styled.p`
-  font-size: 16px;
 `;

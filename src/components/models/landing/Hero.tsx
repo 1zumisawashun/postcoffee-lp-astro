@@ -1,21 +1,24 @@
 import styled from "styled-components";
 import { Button } from "../../uis/Button";
 import PostcoffeeHeader from "../../../assets/images/image_postcoffee_header.jpeg";
+import { BaseTitle } from "../../../functions/themes/BaseTitle";
 
 export const Hero = () => {
   return (
     <HeroContainer>
       <StyledImage src={PostcoffeeHeader} alt="postcoffee-header" />
       <Block>
-        <Subtitle>コーヒー診断であなたにぴったりのコーヒーが毎月届く</Subtitle>
-        <Maintitle>
+        <BaseTitle className="-sub">
+          コーヒー診断であなたにぴったりのコーヒーが毎月届く
+        </BaseTitle>
+        <BaseTitle>
           コーヒーの定期便　
           <br />
           パーソナライズコーヒーBOX
-        </Maintitle>
-        <ButtonWrapper>
+        </BaseTitle>
+        <div>
           <Button className="-large">無料でコーヒー診断</Button>
-        </ButtonWrapper>
+        </div>
       </Block>
     </HeroContainer>
   );
@@ -40,17 +43,5 @@ const Block = styled.div`
   -ms-transform: translate(-50%, -50%);
   display: grid;
   gap: 40px;
-`;
-const Subtitle = styled.p`
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-`;
-const Maintitle = styled.p`
-  font-weight: bold;
-  font-size: 50px;
-  text-align: center;
-`;
-const ButtonWrapper = styled.div`
   text-align: center;
 `;

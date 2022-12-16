@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import { medias } from "../../../functions/constants/medias";
 import "swiper/css";
+import { BaseText } from "../../../functions/themes/BaseText";
+import { BaseTitle } from "../../../functions/themes/BaseTitle";
 
 SwiperCore.use([Autoplay]);
 
@@ -21,7 +23,7 @@ export const Media = () => {
     loop: true,
     centeredSlides: true,
     autoplay: {
-      delay: 2500,
+      delay: 10000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -36,14 +38,14 @@ export const Media = () => {
   return (
     <MediaContainer>
       <MediaWrapper>
-        <Maintitle>今話題のサブスク</Maintitle>
-        <Subtitle>
+        <Headline>今話題のサブスク</Headline>
+        <BaseTitle className="-sub">
           様々なテレビやメディアで
           <br />
           話題になっています
-        </Subtitle>
+        </BaseTitle>
       </MediaWrapper>
-      <Swiper
+      <CustomSwiper
         {...params}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
@@ -51,14 +53,14 @@ export const Media = () => {
         {medias.map((media) => {
           return (
             <SwiperSlide key={media.name}>
-              <Headline>{media.headline}</Headline>
-              <Text>{media.text}</Text>
+              <BaseTitle>{media.headline}</BaseTitle>
+              <BaseTitle className="-sub">{media.text}</BaseTitle>
               <Line></Line>
               <img src={media.image} alt={media.name} />
             </SwiperSlide>
           );
         })}
-      </Swiper>
+      </CustomSwiper>
       <Medias>{mediaImages()}</Medias>
     </MediaContainer>
   );
@@ -71,24 +73,18 @@ const MediaContainer = styled.div`
   padding: 5% 0 0;
   text-align: center;
 `;
-
 const MediaWrapper = styled.div`
-  margin: 3%;
+  display: inline-grid;
+  justify-items: center;
+  gap: 20px;
 `;
-const Maintitle = styled.p`
-  width: 10%;
-  margin: 2% auto;
-  font-size: 15px;
+const Headline = styled(BaseText)`
   border-bottom: solid 1px black;
 `;
-const Subtitle = styled.p`
-  font-size: 25px;
-  font-weight: bold;
-`;
 const Medias = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  padding: 3% 0;
+  padding: 30px 0;
   background-color: #f1f1f1;
   display: flex;
   flex-wrap: wrap;
@@ -99,16 +95,9 @@ const Medias = styled.div`
 const StyledImage = styled.img`
   width: 15%;
 `;
-const Headline = styled.p`
-  width: 100%;
-  font-size: 35px;
-  font-weight: bold;
-`;
-const Text = styled.p`
-  width: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 1% 0;
+const CustomSwiper = styled(Swiper)`
+  width: 90%;
+  padding: 30px 0;
 `;
 const Line = styled.div`
   border-right: 1px solid black;
