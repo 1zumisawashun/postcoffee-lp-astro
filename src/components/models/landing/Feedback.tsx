@@ -3,6 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import { feedbacks } from "../../../functions/constants/feedbacks";
 import "swiper/css";
+import { BaseText } from "../../../functions/themes/BaseText";
+import {
+  DottedLineThree,
+  DottedLineOne,
+} from "../../../functions/themes/DottedLine";
 
 SwiperCore.use([Autoplay]);
 
@@ -38,10 +43,8 @@ export const Feedback = () => {
           return (
             <SwiperSlide key={feedback.name}>
               <FeedbackCardContainer>
-                <div className="picture">
-                  <img src={feedback.image} alt="" />
-                </div>
-                <div className="user">
+                <GapWrapper>
+                  <StyledImage src={feedback.image} alt="" />
                   <Block>
                     <StyledIcon
                       src={feedback.avatar}
@@ -51,8 +54,8 @@ export const Feedback = () => {
 
                     <Name>{feedback.name}</Name>
                   </Block>
-                  <Text>{feedback.text}</Text>
-                </div>
+                  <DottedLineThree>{feedback.text}</DottedLineThree>
+                </GapWrapper>
               </FeedbackCardContainer>
             </SwiperSlide>
           );
@@ -65,7 +68,6 @@ export const Feedback = () => {
 const FeedbackContainer = styled.div`
   width: 90%;
   margin: 5% auto;
-  height: auto;
   background-color: white;
 `;
 const Title = styled.p`
@@ -75,29 +77,25 @@ const Title = styled.p`
 `;
 const FeedbackCardContainer = styled.div`
   border: 1px solid #f1f1f1;
-  padding: 8% 0;
-  margin: 0 6%;
+  padding: 10%;
   border-radius: 1rem;
 `;
 const Block = styled.div`
-  width: 250px;
-  margin: 0 auto;
   display: flex;
+  align-items: center;
 `;
 const StyledIcon = styled.img`
   border-radius: 50%;
-  margin: 0 20%;
+  margin-right: 10px;
 `;
-const Name = styled.p`
-  line-height: 50px;
-  margin: 0 10%;
+const StyledImage = styled.img`
+  width: 100%;
+  height: auto;
+`;
+const Name = styled(DottedLineOne)`
   color: gray;
-  font-size: 13px;
-  font-weight: bold;
 `;
-const Text = styled.p`
-  width: 250px;
-  margin: 0 auto;
-  font-size: 12px;
-  font-weight: bold;
+const GapWrapper = styled.div`
+  display: grid;
+  gap: 10px;
 `;

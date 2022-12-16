@@ -3,9 +3,13 @@ import { Hero } from "../models/landing/Hero";
 import { Media } from "../models/landing/Media";
 import { Product } from "../models/landing/Product";
 import { Feedback } from "../models/landing/Feedback";
+import { StepFirst } from "../models/landing/StepFirst";
+import { StepSecond } from "../models/landing/StepSecond";
 ---
 
 <Hero client:load />
 <Media client:load client:only="react" />
 <Product client:load />
 <Feedback client:load client:only="react" />
+<StepFirst client:load />
+<StepSecond client:load />
