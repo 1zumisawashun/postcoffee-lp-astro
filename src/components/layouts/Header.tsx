@@ -1,7 +1,8 @@
 import PostcoffeeLogo from "../../assets/images/image_postcoffee_logo.png";
 import InstagramLogo from "../../assets/images/image_sns_instagram.png";
 import TwitterLogo from "../../assets/images/image_sns_twitter.png";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { Button } from "../uis/Button";
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -33,25 +34,6 @@ const LinkItem = styled.a`
 const StyledIcon = styled.img`
   width: 20px;
   height: 20px;
-`;
-const Button = styled.button<{ outlined?: boolean }>`
-  display: inline-block;
-  padding: 0.5rem 0;
-  width: 11rem;
-  background: transparent;
-  color: white;
-  background: black;
-  border-radius: 30px;
-  border: 1px solid black;
-  ${(props) =>
-    props.outlined &&
-    css`
-      background: white;
-      color: black;
-    `}
-  :hover {
-    opacity: 0.8;
-  }
 `;
 
 export const Header = () => {
