@@ -3,12 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/uis/Card.astro";
 import { Counter } from "../components/uis/Counter";
 import { Swiper } from "../components/uis/Swiper";
+import { Header } from "../components/layouts/Header";
+import { Footer } from "../components/layouts/Footer";
 ---
 
+<Header client:load />
 <Layout title="Welcome to Astro.">
   <main>
     <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <Counter client:load />
+    <Counter client:load client:only="react" />
     <Swiper client:load />
     <p class="instructions">
       To get started, open the directory <code>src/pages</code> in your project.<br
@@ -39,6 +42,7 @@ import { Swiper } from "../components/uis/Swiper";
     </ul>
   </main>
 </Layout>
+<Footer client:load />
 
 <style>
   main {

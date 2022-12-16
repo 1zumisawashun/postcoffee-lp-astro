@@ -12,11 +12,17 @@
   },
   "dependencies": {
     "@astrojs/react": "^1.2.2",
+    "@julian_cataldo/astro-resets": "^0.12.6",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "astro": "^1.6.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6",
     "swiper": "^8.4.5"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "prettier-plugin-astro": "^0.7.0"
   }
 }
