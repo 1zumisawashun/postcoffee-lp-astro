@@ -1,3 +1,58 @@
+# postcoffee-lp-astro
+
+POST COFFEE の LP クローンのリポジトリです。
+
+## Overview
+
+- 2020 年 12 月
+
+ウェブ制作側から Astro の紹介をされたので素振りで作成。
+2021 年 6 月入社時に POST COFFEE の LP クローンを作成していたので書き心地やパフォーマンスを比較するために作成する。
+
+## 環境
+
+- astro ^1.6.15
+- react ^18.2.0
+- react-youtube ^10.1.0
+- simplebar-react ^2.4.3
+- styled-components ^5.3.6
+- swiper ^8.4.5
+
+## Installation
+
+- clone
+
+```bash
+$ git clone git@github.com:1zumisawashun/postcoffee-lp-astro.git
+$ cd postcoffee-lp-astro
+```
+
+- install
+
+```bash
+$ npm install
+```
+
+- ローカル開発用 URL を開き動作確認をする
+
+```bash
+$ npm run dev
+```
+
+http://localhost:3000/
+
+- 上記の手順で失敗する場合 [Troubleshoot](#Troubleshoot)を確認してください
+
+## How to
+
+- なし
+
+## Troubleshoot
+
+- なし
+
+## その他ドキュメント
+
 # Welcome to [Astro](https://astro.build)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
@@ -6,7 +61,6 @@
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
 ![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
-
 
 ## 🚀 Project Structure
 

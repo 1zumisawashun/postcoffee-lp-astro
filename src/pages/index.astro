@@ -5,8 +5,8 @@ import { Footer } from "../components/layouts/Footer";
 import Landing from "../components/templates/Landing.astro";
 ---
 
-<Header client:load />
 <Layout title="Welcome to Astro.">
+  <Header client:load client:only="react" />
   <Landing />
+  <Footer client:load client:only="react" />
 </Layout>
-<Footer client:load />

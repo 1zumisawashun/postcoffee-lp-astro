@@ -13,15 +13,15 @@ import { Store } from "../models/landing/Store";
 import { Notification } from "../models/landing/Notification";
 ---
 
-<Hero client:load />
+<Hero client:load client:only="react" />
 <Media client:load client:only="react" />
-<Product client:load />
+<Product client:load client:only="react" />
 <Feedback client:load client:only="react" />
-<StepFirst client:load />
-<Recommend client:load />
-<StepSecond client:load />
-<Partner client:load />
-<Youtube client:load />
-<Customize client:load />
-<Store client:load />
-<Notification client:load />
+<StepFirst client:load client:only="react" />
+<Recommend client:load client:only="react" />
+<StepSecond client:load client:only="react" />
+<Partner client:load client:only="react" />
+<Youtube client:load client:only="react" />
+<Customize client:load client:only="react" />
+<Store client:load client:only="react" />
+<Notification client:load client:only="react" />
