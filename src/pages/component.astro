@@ -6,7 +6,7 @@ import Component from "../components/templates/Component.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header client:load client:only="react" />
+  <Header client:only="react" />
   <Component />
-  <Footer client:load client:only="react" />
+  <Footer client:only="react" />
 </Layout>
