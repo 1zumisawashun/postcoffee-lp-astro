@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import styled from "styled-components";
+import { ComboTitle } from "../../uis";
 import { BaseText } from "../../../functions/themes/BaseText";
-import { DottedLineTwo } from "../../../functions/themes/DottedLine";
 
 export type CustomizeCardProps = {
   customize: {
@@ -20,25 +20,21 @@ export type CustomizeCardProps = {
 export const CustomizeCard: FC<CustomizeCardProps> = ({ customize }) => {
   return (
     <CustomizeCardContainer>
-      <div className="content">
-        <div className="info">
-          <div className="title">{customize.headline}</div>
-          <div className="message">{customize.title}</div>
-        </div>
-        <div className="picture">
-          <img src={customize.image} alt="" />
-        </div>
+      <ComboTitle headline={customize.headline} title={customize.title} />
+
+      <div className="picture">
+        <img src={customize.image} alt="" />
       </div>
 
       <CustomizeWrapper>
         <div className="menu">
-          <div className="item">{customize.custom1}</div>
-          <div className="plus">+</div>
-          <div className="item">{customize.custom2}</div>
-          <div className="plus">+</div>
-          <div className="item">{customize.custom3}</div>
-          <div className="plus">+</div>
-          <div className="item">{customize.custom4}</div>
+          <BaseText className="-small">{customize.custom1}</BaseText>
+          <BaseText className="-small">+</BaseText>
+          <BaseText className="-small">{customize.custom2}</BaseText>
+          <BaseText className="-small">+</BaseText>
+          <BaseText className="-small">{customize.custom3}</BaseText>
+          <BaseText className="-small">+</BaseText>
+          <BaseText className="-small">{customize.custom4}</BaseText>
         </div>
 
         <div className="price">
@@ -51,9 +47,11 @@ export const CustomizeCard: FC<CustomizeCardProps> = ({ customize }) => {
 };
 
 const CustomizeCardContainer = styled.div`
-  width: 90%;
+  width: 30%;
   height: 750px;
-  margin: 0% auto 10%;
+  padding: 30px;
+  display: grid;
+  gap: 30px;
   background-color: white;
 `;
 
@@ -64,9 +62,9 @@ const ContentWrapper = styled.div`
   padding: 5% 0 0;
 `;
 const CustomizeWrapper = styled.div`
-  width: 50%;
-  height: auto;
-  margin: 5% auto;
-  border: solid;
-  padding: 2%;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
 `;

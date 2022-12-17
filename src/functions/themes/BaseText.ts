@@ -8,6 +8,9 @@ export const BaseText = styled.p`
   &.-white {
     color: white;
   }
+  &.-small {
+    font-size: 14px;
+  }
   @media (max-width: 576px) {
     font-size: 14px;
   }
