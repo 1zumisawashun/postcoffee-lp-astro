@@ -1,12 +1,12 @@
 import type { FC } from "react";
 import styled, { css } from "styled-components";
 import { BaseText } from "../../../functions/themes/BaseText";
-import { BaseTitle } from "../../../functions/themes/BaseTitle";
+import { ComboTitle } from "../../uis";
 
 export type FlexCardProps = {
   card: {
     image: string;
-    headline?: string;
+    headline: string;
     title: string;
     text: string;
     addition: string;
@@ -20,8 +20,7 @@ export const FlexCard: FC<FlexCardProps> = ({ card }) => {
       <StyledImage src={card.image} alt="" />
 
       <ContentWrapper>
-        <Headline>{card.headline}</Headline>
-        <BaseTitle>{card.title}</BaseTitle>
+        <ComboTitle headline={card.headline} title={card.title} shouldLeft />
         <BaseText>{card.text}</BaseText>
         <BaseText>{card.addition}</BaseText>
       </ContentWrapper>
@@ -42,10 +41,6 @@ const FlexCardContainer = styled.div<{ reverse: boolean }>`
 `;
 const StyledImage = styled.img`
   width: 40%;
-`;
-const Headline = styled(BaseText)`
-  width: fit-content;
-  border-bottom: 1px solid black;
 `;
 const ContentWrapper = styled.div`
   width: 55%;

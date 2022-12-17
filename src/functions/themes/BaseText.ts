@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const BaseText = styled.p`
   font-size: 16px;
+  white-space: pre-wrap;
   &.-bold {
     font-weight: bold;
   }

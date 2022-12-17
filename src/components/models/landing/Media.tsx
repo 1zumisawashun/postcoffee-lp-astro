@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import { medias } from "../../../functions/constants/medias";
 import "swiper/css";
-import { BaseText } from "../../../functions/themes/BaseText";
 import { BaseTitle } from "../../../functions/themes/BaseTitle";
+import { ComboTitle } from "../../uis";
 
 SwiperCore.use([Autoplay]);
 
@@ -37,14 +37,11 @@ export const Media = () => {
   };
   return (
     <MediaContainer>
-      <MediaWrapper>
-        <Headline>今話題のサブスク</Headline>
-        <BaseTitle className="-sub">
-          様々なテレビやメディアで
-          <br />
-          話題になっています
-        </BaseTitle>
-      </MediaWrapper>
+      <ComboTitle
+        headline="今話題のサブスク"
+        title={`様々なテレビやメディアで\n話題になっています`}
+      />
+
       <CustomSwiper
         {...params}
         onSlideChange={() => console.log("slide change")}
@@ -72,14 +69,6 @@ const MediaContainer = styled.div`
   background-color: #f1f1f1;
   padding: 5% 0 0;
   text-align: center;
-`;
-const MediaWrapper = styled.div`
-  display: inline-grid;
-  justify-items: center;
-  gap: 20px;
-`;
-const Headline = styled(BaseText)`
-  border-bottom: solid 1px black;
 `;
 const Medias = styled.div`
   width: 90%;

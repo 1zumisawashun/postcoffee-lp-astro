@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import PostcoffeeBox from "../../../assets/images/image_postcoffee_box.png";
 import Check from "../../../assets/images/image_check.png";
-import { Button } from "../../uis/Button";
+import { Button, ComboTitle } from "../../uis";
 import { BaseText } from "../../../functions/themes/BaseText";
-import { BaseTitle } from "../../../functions/themes/BaseTitle";
 
 const PanelItems = [
   "マグとお湯を用意するだけでOK！",
@@ -17,13 +16,12 @@ export const Product = () => {
       <StyledImage src={PostcoffeeBox} alt="postcoffee-box" />
 
       <ProductContent>
-        <Headline>あなた専用のコーヒーボックス</Headline>
+        <ComboTitle
+          headline="あなた専用のコーヒーボックス"
+          title={`すぐにコーヒーライフを始めるためのオールインワンボックス\n診断から好みにあったコーヒーが3種類`}
+          shouldLeft
+        />
 
-        <BaseTitle className="-sub">
-          すぐにコーヒーライフを始めるためのオールインワンボックス
-          <br />
-          診断から好みにあったコーヒーが3種類
-        </BaseTitle>
         <BaseText className="-bold">
           好みに合わせて、豆の挽き方や頻度、分量、シュガー、ミルク（クリープ）などカスタマイズ！
         </BaseText>
@@ -35,6 +33,7 @@ export const Product = () => {
             </PanelItem>
           ))}
         </Panel>
+
         <PriceWrapper>
           <Ship>送料無料</Ship>
           <ExcludingTax>¥1,480~</ExcludingTax>
