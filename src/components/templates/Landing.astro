@@ -5,6 +5,8 @@ import { Product } from "../models/landing/Product";
 import { Feedback } from "../models/landing/Feedback";
 import { StepFirst } from "../models/landing/StepFirst";
 import { StepSecond } from "../models/landing/StepSecond";
+import { Recommend } from "../models/landing/Recommend";
+import { Partner } from "../models/landing/Partner";
 ---
 
 <Hero client:load />
@@ -12,4 +14,6 @@ import { StepSecond } from "../models/landing/StepSecond";
 <Product client:load />
 <Feedback client:load client:only="react" />
 <StepFirst client:load />
+<Recommend client:load />
 <StepSecond client:load />
+<Partner client:load />

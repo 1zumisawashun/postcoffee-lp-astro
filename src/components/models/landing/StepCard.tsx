@@ -1,9 +1,6 @@
 import type { FC } from "react";
 import styled from "styled-components";
-import { Button } from "../../uis/Button";
 import { BaseText } from "../../../functions/themes/BaseText";
-import { BaseTitle } from "../../../functions/themes/BaseTitle";
-import { steps } from "../../../functions/constants/steps";
 
 export type StepCardProps = {
   step: {

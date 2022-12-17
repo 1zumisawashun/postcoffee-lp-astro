@@ -5,6 +5,9 @@ export const BaseText = styled.p`
   &.-bold {
     font-weight: bold;
   }
+  &.-white {
+    color: white;
+  }
   @media (max-width: 576px) {
     font-size: 14px;
   }
