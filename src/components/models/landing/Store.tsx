@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { FlexCard } from "./FlexCard";
-import { recommends } from "../../../functions/constants/recommends";
+import { stores } from "../../../functions/constants/stores";
 
 export const Store = () => {
   return (
     <>
-      {recommends.map((recommend) => (
-        <FlexCard card={recommend}></FlexCard>
+      {stores.map((store) => (
+        <FlexCard card={store}></FlexCard>
       ))}
     </>
   );
