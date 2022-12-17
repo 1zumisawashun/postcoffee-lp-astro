@@ -1,23 +1,13 @@
-import type { FC } from "react";
 import styled from "styled-components";
 import { ComboTitle } from "../../uis";
 import { BaseText } from "../../../functions/themes/BaseText";
+import type { Customize } from "../../../functions/types/Customize";
 
 export type CustomizeCardProps = {
-  customize: {
-    headline: string;
-    title: string;
-    image: string;
-    custom1: string;
-    custom2: string;
-    custom3: string;
-    custom4: string;
-    priceExcludingTax: string;
-    priceIncludingTax: string;
-  };
+  customize: Customize;
 };
 
-export const CustomizeCard: FC<CustomizeCardProps> = ({ customize }) => {
+export const CustomizeCard: React.FC<CustomizeCardProps> = ({ customize }) => {
   return (
     <CustomizeCardContainer>
       <ComboTitle headline={customize.headline} title={customize.title} />

@@ -30,27 +30,35 @@ export const Feedback = () => {
 
   return (
     <FeedbackContainer>
-      <BaseTitle className="-normal">Enjoy your lifestyle.</BaseTitle>
-      <Swiper
-        {...params}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
-        {feedbacks.map((feedback) => {
-          return (
-            <SwiperSlide key={feedback.name}>
-              <FeedbackCard feedback={feedback} />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      <FeedbackWrapper>
+        <CustomTitle className="-normal">Enjoy your lifestyle.</CustomTitle>
+        <Swiper
+          {...params}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {feedbacks.map((feedback) => {
+            return (
+              <SwiperSlide key={feedback.name}>
+                <FeedbackCard feedback={feedback} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </FeedbackWrapper>
     </FeedbackContainer>
   );
 };
 
 const FeedbackContainer = styled.div`
-  width: 90%;
-  margin: 5% auto;
   background-color: white;
   text-align: center;
+  padding: 30px 0;
+`;
+const FeedbackWrapper = styled.div`
+  width: 90%;
+  margin: 5% auto;
+`;
+const CustomTitle = styled(BaseTitle)`
+  margin-bottom: 30px;
 `;

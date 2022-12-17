@@ -1,17 +1,13 @@
-import type { FC } from "react";
 import styled from "styled-components";
 import { BaseText } from "../../../functions/themes/BaseText";
 import { DottedLineTwo } from "../../../functions/themes/DottedLine";
+import type { Partner } from "../../../functions/types/Partner";
 
 export type PartnerCardProps = {
-  partner: {
-    image: string;
-    name: string;
-    prefecture: string;
-  };
+  partner: Partner;
 };
 
-export const PartnerCard: FC<PartnerCardProps> = ({ partner }) => {
+export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
   return (
     <PartnerCardContainer>
       <div>

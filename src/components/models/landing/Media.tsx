@@ -50,10 +50,14 @@ export const Media = () => {
         {medias.map((media) => {
           return (
             <SwiperSlide key={media.name}>
-              <BaseTitle>{media.headline}</BaseTitle>
-              <BaseTitle className="-sub">{media.text}</BaseTitle>
-              <Line></Line>
-              <img src={media.image} alt={media.name} />
+              <GapWrapper>
+                <BaseTitle>{media.headline}</BaseTitle>
+                <BaseTitle className="-sub">{media.text}</BaseTitle>
+                <Line></Line>
+                <div>
+                  <img src={media.image} alt={media.name} />
+                </div>
+              </GapWrapper>
             </SwiperSlide>
           );
         })}
@@ -88,9 +92,12 @@ const CustomSwiper = styled(Swiper)`
   width: 90%;
   padding: 30px 0;
 `;
+const GapWrapper = styled.div`
+  display: inline-grid;
+  gap: 10px;
+`;
 const Line = styled.div`
   border-right: 1px solid black;
   width: 50%;
   height: 50px;
-  margin: 2% 0;
 `;

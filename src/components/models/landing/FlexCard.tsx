@@ -1,20 +1,13 @@
-import type { FC } from "react";
 import styled, { css } from "styled-components";
 import { BaseText } from "../../../functions/themes/BaseText";
 import { ComboTitle } from "../../uis";
+import type { FlexCardItem } from "../../../functions/types/Common";
 
 export type FlexCardProps = {
-  card: {
-    image: string;
-    headline: string;
-    title: string;
-    text: string;
-    addition: string;
-    isReverse: boolean;
-  };
+  card: FlexCardItem;
 };
 
-export const FlexCard: FC<FlexCardProps> = ({ card }) => {
+export const FlexCard: React.FC<FlexCardProps> = ({ card }) => {
   return (
     <FlexCardContainer reverse={card.isReverse}>
       <StyledImage src={card.image} alt="" />

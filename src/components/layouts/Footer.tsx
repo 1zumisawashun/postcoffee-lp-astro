@@ -20,6 +20,10 @@ const StyledHeaderFooter = styled.div`
 const StyledImage = styled.img`
   width: auto;
   height: 40px;
+  :hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 `;
 const GapWrapper = styled.div`
   display: flex;
@@ -32,10 +36,18 @@ const GapWrapper = styled.div`
 const LinkItem = styled.a`
   font-size: 14px;
   display: block;
+  :hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 `;
 const StyledIcon = styled.img`
   width: 20px;
   height: 20px;
+  :hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 `;
 const Copyright = styled.div`
   width: 20%;

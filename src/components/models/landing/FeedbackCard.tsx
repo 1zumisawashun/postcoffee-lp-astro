@@ -3,14 +3,10 @@ import {
   DottedLineThree,
   DottedLineOne,
 } from "../../../functions/themes/DottedLine";
+import type { Feedback } from "../../../functions/types/Feedback";
 
 export type FeedbackCardProps = {
-  feedback: {
-    image: string;
-    avatar: string;
-    name: string;
-    text: string;
-  };
+  feedback: Feedback;
 };
 
 export const FeedbackCard: React.FC<FeedbackCardProps> = ({ feedback }) => {

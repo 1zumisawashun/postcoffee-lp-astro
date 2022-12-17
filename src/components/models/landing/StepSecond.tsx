@@ -25,8 +25,8 @@ const StepContainer = styled.div`
 `;
 const StepWrapper = styled.div`
   width: 90%;
-  margin: 0 auto;
-  height: auto;
   padding: 5% 0;
   display: flex;
+  margin: auto;
+  gap: 2%;
 `;

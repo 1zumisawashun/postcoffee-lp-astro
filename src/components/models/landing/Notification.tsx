@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { FlexCard } from "./FlexCard";
-import { stores } from "../../../functions/constants/stores";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 import { BaseText } from "../../../functions/themes/BaseText";

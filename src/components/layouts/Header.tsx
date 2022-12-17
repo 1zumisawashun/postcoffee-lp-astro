@@ -2,7 +2,7 @@ import PostcoffeeLogo from "../../assets/images/image_postcoffee_logo.png";
 import InstagramLogo from "../../assets/images/image_sns_instagram.png";
 import TwitterLogo from "../../assets/images/image_sns_twitter.png";
 import styled from "styled-components";
-import { Button } from "../uis/Button";
+import { Button } from "../uis";
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -21,6 +21,10 @@ const StyledHeaderWrapper = styled.div`
 const StyledImage = styled.img`
   width: auto;
   height: 50px;
+  :hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 `;
 const GapWrapper = styled.div`
   display: flex;
@@ -30,10 +34,18 @@ const GapWrapper = styled.div`
 const LinkItem = styled.a`
   font-weight: bold;
   font-size: 16px;
+  :hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 `;
 const StyledIcon = styled.img`
   width: 20px;
   height: 20px;
+  :hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 `;
 
 export const Header = () => {
