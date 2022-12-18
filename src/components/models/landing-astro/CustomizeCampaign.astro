@@ -1,0 +1,60 @@
+---
+import { Button } from "../../uis";
+import { BaseTitle } from "../../../functions/themes";
+
+const campaigns = [
+  "ずっと全国送料無料",
+  "折りたたみドリッパープレゼント",
+  "スタートブックプレゼント",
+  "オリジナルステッカープレゼント",
+];
+---
+
+<div class="customize-campaign-container">
+  <BaseTitle>月々¥1,480~（税込¥1,598~）</BaseTitle>
+  <p class="custom-text">4つの特典</p>
+  <div class="block">
+    {
+      campaigns.map((campaign, index) => (
+        <div class="wrapper">
+          <div class="panel">{`特典${index + 1}`}</div>
+          <div>{campaign}</div>
+        </div>
+      ))
+    }
+  </div>
+  <Button className="-fullwidth" client:only="react"
+    >無料でコーヒー診断をする</Button
+  >
+</div>
+
+<style>
+  .customize-campaign-container {
+    width: 60%;
+    margin: auto;
+    display: grid;
+    gap: 30px;
+    text-align: center;
+  }
+  .block {
+    display: flex;
+    background-color: white;
+  }
+  .wrapper {
+    width: 20%;
+    margin: 3% auto;
+    background-color: white;
+  }
+  .panel {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    padding: 3% 0;
+  }
+  .custom-text {
+    font-size: 16px;
+    padding: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+</style>

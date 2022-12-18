@@ -8,7 +8,7 @@ import StepSecond from "../models/landing-astro/StepSecond.astro";
 import Recommend from "../models/landing-astro/Recommend.astro";
 import { Partner } from "../models/landing-astro/Partner";
 import { Youtube } from "../models/landing-astro/Youtube";
-import { Customize } from "../models/landing-astro/Customize";
+import Customize from "../models/landing-astro/Customize.astro";
 import Store from "../models/landing-astro/Store.astro";
 import { Notification } from "../models/landing-astro/Notification";
 ---
@@ -23,6 +23,6 @@ import { Notification } from "../models/landing-astro/Notification";
 <StepSecond />
 <Partner client:only="react" />
 <Youtube client:only="react" />
-<Customize client:only="react" />
+<Customize />
 <Store />
 <Notification client:only="react" />

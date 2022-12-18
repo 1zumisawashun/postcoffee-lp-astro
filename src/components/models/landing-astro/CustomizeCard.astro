@@ -1,0 +1,68 @@
+---
+import { ComboTitle } from "../../uis";
+import { BaseText } from "../../../functions/themes";
+import type { Customize } from "../../../functions/types/Customize";
+
+export interface Props {
+  customize: Customize;
+}
+
+const { customize } = Astro.props;
+---
+
+<div class="customize-card-container">
+  <ComboTitle headline={customize.headline} title={customize.title} />
+
+  <div>
+    <img src={customize.image} alt="" />
+  </div>
+
+  <div class="customize-wrapper">
+    <div>
+      <BaseText className="-small" client:only="react"
+        >{customize.custom1}</BaseText
+      >
+      <BaseText className="-small" client:only="react">+</BaseText>
+      <BaseText className="-small" client:only="react"
+        >{customize.custom2}</BaseText
+      >
+      <BaseText className="-small" client:only="react">+</BaseText>
+      <BaseText className="-small" client:only="react"
+        >{customize.custom3}</BaseText
+      >
+      <BaseText className="-small" client:only="react">+</BaseText>
+      <BaseText className="-small" client:only="react"
+        >{customize.custom4}</BaseText
+      >
+    </div>
+
+    <div class="price">
+      <div class="excludingtax">{customize.priceExcludingTax}</div>
+      <div class="includingtax">{customize.priceIncludingTax}</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .customize-card-container {
+    width: 30%;
+    height: 750px;
+    padding: 30px;
+    display: grid;
+    gap: 30px;
+    background-color: white;
+  }
+  .content-wrapper {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 5% 0 0;
+  }
+  .customize-wrapper {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+  }
+</style>
