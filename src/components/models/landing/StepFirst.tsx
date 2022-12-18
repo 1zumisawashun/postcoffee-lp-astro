@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useMemo } from "react";
-import { StepCard } from "./StepCard";
+import { StepCard } from "../../uis/StepCard";
 import { steps } from "../../../functions/constants/steps";
 import { BaseContainer } from "../../../functions/themes";
 

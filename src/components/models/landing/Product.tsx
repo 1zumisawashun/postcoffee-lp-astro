@@ -26,20 +26,22 @@ export const Product = () => {
           <BaseText className="-bold">
             好みに合わせて、豆の挽き方や頻度、分量、シュガー、ミルク（クリープ）などカスタマイズ！
           </BaseText>
-          <Panel>
+
+          <PanelWrapper>
             {PanelItems.map((item) => (
               <PanelItem>
                 <StyledIcon src={Check} alt="" />
                 {item}
               </PanelItem>
             ))}
-          </Panel>
+          </PanelWrapper>
 
           <PriceWrapper>
             <Ship>送料無料</Ship>
             <ExcludingTax>¥1,480~</ExcludingTax>
             <BaseText>（税込¥1,598~）</BaseText>
           </PriceWrapper>
+
           <Button className="-fullwidth">
             1分であなた好みのコーヒー診断 <br />
             無料でコーヒーを診断
@@ -68,11 +70,7 @@ const ProductContent = styled.div`
   display: grid;
   gap: 20px;
 `;
-const Headline = styled(BaseText)`
-  width: fit-content;
-  border-bottom: 1px solid black;
-`;
-const Panel = styled.div`
+const PanelWrapper = styled.div`
   background-color: #f1f1f1;
   padding: 20px;
   display: grid;
@@ -92,6 +90,7 @@ const PanelItem = styled.div`
 const PriceWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 `;
 const Ship = styled(BaseText)`

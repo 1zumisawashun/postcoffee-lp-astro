@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
-import { BaseText } from "../../../functions/themes";
-import { ComboTitle } from "../../uis";
-import type { FlexCardItem } from "../../../functions/types/Common";
+import { BaseText } from "../../functions/themes";
+import { ComboTitle } from ".";
+import type { FlexCardItem } from "../../functions/types/Common";
 
 export type FlexCardProps = {
   card: FlexCardItem;

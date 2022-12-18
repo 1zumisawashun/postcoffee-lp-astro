@@ -1,4 +1,4 @@
-import { FlexCard } from "./FlexCard";
+import { FlexCard } from "../../uis/FlexCard";
 import { recommends } from "../../../functions/constants/recommends";
 import { BaseContainer } from "../../../functions/themes";
 
