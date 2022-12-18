@@ -2,8 +2,6 @@
 import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import "swiper/css/navigation"; // スタイルをインポート
-import "swiper/css/pagination"; // スタイルをインポート
 
 export const Swiper = () => {
   return (

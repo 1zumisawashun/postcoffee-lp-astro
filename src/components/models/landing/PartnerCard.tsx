@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { BaseText } from "../../../functions/themes/BaseText";
-import { DottedLineTwo } from "../../../functions/themes/DottedLine";
+import { BaseText, DottedLineTwo } from "../../../functions/themes";
 import type { Partner } from "../../../functions/types/Partner";
 
 export type PartnerCardProps = {

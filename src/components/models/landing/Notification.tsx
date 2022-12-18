@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
-import { BaseText } from "../../../functions/themes/BaseText";
+import { BaseText, BaseContainer } from "../../../functions/themes";
 
 export const Notification = () => {
   const lists = () => {
@@ -27,19 +27,21 @@ export const Notification = () => {
   };
 
   return (
-    <NotificationContainer>
-      <Headline>メディア掲載情報</Headline>
-      <SimpleBar style={{ maxHeight: 300 }} forceVisible="y" autoHide={false}>
-        {lists()}
-      </SimpleBar>
-    </NotificationContainer>
+    <BaseContainer className="-white">
+      <NotificationContainer>
+        <Headline>メディア掲載情報</Headline>
+        <SimpleBar style={{ maxHeight: 300 }} forceVisible="y" autoHide={false}>
+          {lists()}
+        </SimpleBar>
+      </NotificationContainer>
+    </BaseContainer>
   );
 };
 
 const NotificationContainer = styled.div`
   width: 70%;
   height: auto;
-  margin: 10% auto;
+  margin: 5% auto;
 `;
 const Headline = styled(BaseText)`
   width: fit-content;

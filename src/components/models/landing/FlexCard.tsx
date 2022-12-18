@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { BaseText } from "../../../functions/themes/BaseText";
+import { BaseText } from "../../../functions/themes";
 import { ComboTitle } from "../../uis";
 import type { FlexCardItem } from "../../../functions/types/Common";
 

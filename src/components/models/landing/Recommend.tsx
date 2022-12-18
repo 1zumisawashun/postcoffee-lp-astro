@@ -1,13 +1,15 @@
-import styled from "styled-components";
 import { FlexCard } from "./FlexCard";
 import { recommends } from "../../../functions/constants/recommends";
+import { BaseContainer } from "../../../functions/themes";
 
 export const Recommend = () => {
   return (
-    <>
+    <BaseContainer className="-white">
       {recommends.map((recommend) => (
-        <FlexCard card={recommend}></FlexCard>
+        <BaseContainer className="-white">
+          <FlexCard card={recommend} />
+        </BaseContainer>
       ))}
-    </>
+    </BaseContainer>
   );
 };

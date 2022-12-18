@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ComboTitle } from "../../uis";
-import { BaseText } from "../../../functions/themes/BaseText";
+import { BaseText } from "../../../functions/themes";
 import type { Customize } from "../../../functions/types/Customize";
 
 export type CustomizeCardProps = {

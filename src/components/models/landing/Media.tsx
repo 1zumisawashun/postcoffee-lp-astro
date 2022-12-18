@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import { medias } from "../../../functions/constants/medias";
 import "swiper/css";
-import { BaseTitle } from "../../../functions/themes/BaseTitle";
+import { BaseTitle, BaseContainer } from "../../../functions/themes";
 import { ComboTitle } from "../../uis";
 
 SwiperCore.use([Autoplay]);
@@ -36,7 +36,7 @@ export const Media = () => {
     },
   };
   return (
-    <MediaContainer>
+    <BaseContainer className="-center">
       <ComboTitle
         headline="今話題のサブスク"
         title={`様々なテレビやメディアで\n話題になっています`}
@@ -63,17 +63,10 @@ export const Media = () => {
         })}
       </CustomSwiper>
       <Medias>{mediaImages()}</Medias>
-    </MediaContainer>
+    </BaseContainer>
   );
 };
 
-const MediaContainer = styled.div`
-  width: 100%;
-  height: auto;
-  background-color: #f1f1f1;
-  padding: 5% 0 0;
-  text-align: center;
-`;
 const Medias = styled.div`
   width: 90%;
   margin: 0 auto;

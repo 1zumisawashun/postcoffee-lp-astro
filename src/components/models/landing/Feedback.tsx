@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import { feedbacks } from "../../../functions/constants/feedbacks";
 import "swiper/css";
-import { BaseTitle } from "../../../functions/themes/BaseTitle";
+import { BaseTitle, BaseContainer } from "../../../functions/themes";
 import { FeedbackCard } from "./FeedbackCard";
 
 SwiperCore.use([Autoplay]);
@@ -29,7 +29,7 @@ export const Feedback = () => {
   };
 
   return (
-    <FeedbackContainer>
+    <BaseContainer className="-white -center">
       <FeedbackWrapper>
         <CustomTitle className="-normal">Enjoy your lifestyle.</CustomTitle>
         <Swiper
@@ -46,18 +46,13 @@ export const Feedback = () => {
           })}
         </Swiper>
       </FeedbackWrapper>
-    </FeedbackContainer>
+    </BaseContainer>
   );
 };
 
-const FeedbackContainer = styled.div`
-  background-color: white;
-  text-align: center;
-  padding: 30px 0;
-`;
 const FeedbackWrapper = styled.div`
   width: 90%;
-  margin: 5% auto;
+  margin: auto;
 `;
 const CustomTitle = styled(BaseTitle)`
   margin-bottom: 30px;

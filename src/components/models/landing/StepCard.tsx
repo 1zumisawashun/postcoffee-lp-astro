@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BaseText } from "../../../functions/themes/BaseText";
+import { BaseText } from "../../../functions/themes";
 import type { StepCardItem } from "../../../functions/types/Common";
 
 export type StepCardProps = {

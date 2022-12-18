@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { PartnerCard } from "./PartnerCard";
 import { partners } from "../../../functions/constants/partners";
-import { BaseText } from "../../../functions/themes/BaseText";
+import { BaseText } from "../../../functions/themes";
 import RoasterPartnerLogo from "../../../assets/images/image_roaster_partner_logo.png";
 import RoasterBg from "../../../assets/images/image_roaster_bg.jpeg";
 

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Button } from "../../uis";
-import { BaseText } from "../../../functions/themes/BaseText";
-import { BaseTitle } from "../../../functions/themes/BaseTitle";
+import { BaseText, BaseTitle } from "../../../functions/themes";
 
 const campaigns = [
   "ずっと全国送料無料",

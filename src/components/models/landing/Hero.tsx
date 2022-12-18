@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Button } from "../../uis/Button";
+import { Button } from "../../uis";
 import PostcoffeeHeader from "../../../assets/images/image_postcoffee_header.jpeg";
-import { BaseTitle } from "../../../functions/themes/BaseTitle";
+import { BaseTitle } from "../../../functions/themes";
 
 export const Hero = () => {
   return (

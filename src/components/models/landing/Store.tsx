@@ -1,12 +1,14 @@
-import styled from "styled-components";
 import { FlexCard } from "./FlexCard";
 import { stores } from "../../../functions/constants/stores";
+import { BaseContainer } from "../../../functions/themes";
 
 export const Store = () => {
   return (
     <>
       {stores.map((store) => (
-        <FlexCard card={store}></FlexCard>
+        <BaseContainer className="-white">
+          <FlexCard card={store} />
+        </BaseContainer>
       ))}
     </>
   );

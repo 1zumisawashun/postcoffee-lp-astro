@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import {
-  DottedLineThree,
-  DottedLineOne,
-} from "../../../functions/themes/DottedLine";
+import { DottedLineThree, DottedLineOne } from "../../../functions/themes";
 import type { Feedback } from "../../../functions/types/Feedback";
 
 export type FeedbackCardProps = {
