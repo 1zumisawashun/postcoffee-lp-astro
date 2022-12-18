@@ -1,0 +1,105 @@
+---
+import PostcoffeeBox from "../../../assets/images/image_postcoffee_box.png";
+import Check from "../../../assets/images/image_check.png";
+import { Button, ComboTitle } from "../../uis";
+import { BaseText, BaseContainer } from "../../../functions/themes";
+
+const PanelItems = [
+  "マグとお湯を用意するだけでOK！",
+  "縛りなしでスキップも簡単！",
+  "ずっと、全国送料無料！",
+];
+---
+
+<BaseContainer className="-white" client:only="react">
+  <div class="product-container">
+    <img src={PostcoffeeBox} alt="postcoffee-box" class="styled-image" />
+
+    <div class="product-content">
+      <ComboTitle
+        headline="あなた専用のコーヒーボックス"
+        title={`すぐにコーヒーライフを始めるためのオールインワンボックス\n診断から好みにあったコーヒーが3種類`}
+        shouldLeft
+        client:only="react"
+      />
+
+      <BaseText className="-bold" client:only="react">
+        好みに合わせて、豆の挽き方や頻度、分量、シュガー、ミルク（クリープ）などカスタマイズ！
+      </BaseText>
+
+      <div class="panel-wrapper">
+        {
+          PanelItems.map((item) => (
+            <div class="panel-item">
+              <img src={Check} alt="" class="styled-icon" />
+              {item}
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="price-wrapper">
+        <p class="ship">送料無料</p>
+        <p class="excluding-tax">¥1,480~</p>
+        <BaseText client:only="react">（税込¥1,598~）</BaseText>
+      </div>
+
+      <Button className="-fullwidth" client:only="react">
+        1分であなた好みのコーヒー診断 <br />無料でコーヒーを診断
+      </Button>
+    </div>
+  </div>
+</BaseContainer>
+
+<style>
+  .product-container {
+    width: 90%;
+    margin: auto;
+    border-radius: 30px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+  }
+  .styled-image {
+    width: 55%;
+    height: auto;
+  }
+  .product-container {
+    width: 40%;
+    display: grid;
+    gap: 20px;
+  }
+  .panel-wrapper {
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+  }
+  .panel-item {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  .styled-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+  .price-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .ship {
+    font-size: 16px;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  .excluding-tax {
+    font-weight: bold;
+    font-size: 40px;
+  }
+</style>

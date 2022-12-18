@@ -1,0 +1,36 @@
+---
+import { BaseText, DottedLineTwo } from "../../../functions/themes";
+import type { Partner } from "../../../functions/types/Partner";
+
+export interface Props {
+  partner: Partner;
+}
+
+const { partner } = Astro.props;
+---
+
+<div class="partner-card-container">
+  <div>
+    <img src={partner.image} alt={partner.image} />
+    <div class="content-wrapper">
+      <BaseText client:only="react">{partner.name}</BaseText>
+      <DottedLineTwo client:only="react">（{partner.prefecture}）</DottedLineTwo
+      >
+    </div>
+  </div>
+</div>
+
+<style>
+  .partner-card-container {
+    width: 20%;
+    height: 250px;
+    background-color: white;
+    border: 1px solid black;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-wrapper {
+    height: 80px;
+  }
+</style>

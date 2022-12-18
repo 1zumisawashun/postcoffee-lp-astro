@@ -1,0 +1,46 @@
+---
+import { Button } from "../../uis";
+import PostcoffeeHeader from "../../../assets/images/image_postcoffee_header.jpeg";
+import { BaseTitle } from "../../../functions/themes";
+---
+
+<div class="hero-container">
+  <img src={PostcoffeeHeader} alt="postcoffee-header" class="styled-image" />
+  <div class="block">
+    <BaseTitle className="-sub" client:only="react">
+      コーヒー診断であなたにぴったりのコーヒーが毎月届く
+    </BaseTitle>
+    <BaseTitle client:only="react">
+      コーヒーの定期便　
+      <br />
+      パーソナライズコーヒーBOX
+    </BaseTitle>
+    <div>
+      <Button className="-large" client:only="react">無料でコーヒー診断</Button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero-container {
+    padding: 90px 0 0 0;
+    position: relative;
+  }
+  .styled-image {
+    width: 100%;
+    height: calc(100vh - 90px);
+    object-fit: cover;
+    margin-bottom: -10px;
+  }
+  .block {
+    position: absolute;
+    top: calc(50% + 45px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    display: grid;
+    gap: 40px;
+    text-align: center;
+  }
+</style>
