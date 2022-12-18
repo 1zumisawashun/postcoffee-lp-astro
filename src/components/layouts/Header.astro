@@ -1,0 +1,71 @@
+---
+import PostcoffeeLogo from "../../assets/images/image_postcoffee_logo.png";
+import InstagramLogo from "../../assets/images/image_sns_instagram.png";
+import TwitterLogo from "../../assets/images/image_sns_twitter.png";
+import { Button } from "../uis";
+---
+
+<header class="styled-header">
+  <div class="styled-header-wrapper">
+    <div class="gap-wrapper">
+      <img src={PostcoffeeLogo} alt="postcoffee-logo" class="styled-image" />
+      <a class="link-item">ABOUT</a>
+      <a class="link-item">STORE</a>
+      <a class="link-item">FAQ</a>
+      <a class="link-item">MAGAGINE</a>
+      <img src={InstagramLogo} alt="instagtram" class="styled-icon" />
+      <img src={TwitterLogo} alt="twitter" class="styled-icon" />
+    </div>
+
+    <div class="gap-wrapper">
+      <Button client:only="react" outlined>無料でコーヒー診断</Button>
+      <Button client:only="react">LOGIN</Button>
+    </div>
+  </div>
+</header>
+
+<style>
+  .styled-header {
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    background-color: white;
+    z-index: 9999;
+  }
+  .styled-header-wrapper {
+    max-width: 1200px;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .styled-image {
+    width: auto;
+    height: 50px;
+  }
+  .styled-image:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .gap-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .link-item {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .link-item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .styled-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .styled-icon:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+</style>

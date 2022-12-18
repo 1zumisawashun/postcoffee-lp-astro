@@ -1,0 +1,13 @@
+---
+import FlexCard from "../../uis/FlexCard.astro";
+import { stores } from "../../../functions/constants/stores";
+import { BaseContainer } from "../../../functions/themes";
+---
+
+{
+  stores.map((store) => (
+    <BaseContainer className="-white" client:only="react">
+      <FlexCard card={store} />
+    </BaseContainer>
+  ))
+}

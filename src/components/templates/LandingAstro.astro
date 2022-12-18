@@ -1,0 +1,28 @@
+---
+import { Hero } from "../models/landing-astro/Hero";
+import { Media } from "../models/landing-astro/Media";
+import { Product } from "../models/landing-astro/Product";
+import { Feedback } from "../models/landing-astro/Feedback";
+import StepFirst from "../models/landing-astro/StepFirst.astro";
+import StepSecond from "../models/landing-astro/StepSecond.astro";
+import Recommend from "../models/landing-astro/Recommend.astro";
+import { Partner } from "../models/landing-astro/Partner";
+import { Youtube } from "../models/landing-astro/Youtube";
+import { Customize } from "../models/landing-astro/Customize";
+import Store from "../models/landing-astro/Store.astro";
+import { Notification } from "../models/landing-astro/Notification";
+---
+
+<!-- client:only="react"でstyled-componentを有効にしている -->
+<Hero client:only="react" />
+<Media client:only="react" />
+<Product client:only="react" />
+<Feedback client:only="react" />
+<StepFirst />
+<Recommend />
+<StepSecond />
+<Partner client:only="react" />
+<Youtube client:only="react" />
+<Customize client:only="react" />
+<Store />
+<Notification client:only="react" />

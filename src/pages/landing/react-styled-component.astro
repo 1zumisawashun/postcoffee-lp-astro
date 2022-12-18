@@ -1,12 +1,12 @@
 ---
 import Layout from "../../components/layouts/Layout.astro";
-import { Header } from "../../components/layouts/Header";
-import { Footer } from "../../components/layouts/Footer";
+import Header from "../../components/layouts/Header.astro";
+import Footer from "../../components/layouts/Footer.astro";
 import Landing from "../../components/templates/LandingReactStyledComponent.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header client:only="react" />
+  <Header />
   <Landing />
-  <Footer client:only="react" />
+  <Footer />
 </Layout>

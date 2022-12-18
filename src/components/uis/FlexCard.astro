@@ -1,0 +1,47 @@
+---
+import { BaseText } from "../../functions/themes";
+import { ComboTitle } from ".";
+import type { FlexCardItem } from "../../functions/types/Common";
+
+export interface Props {
+  card: FlexCardItem;
+}
+
+const { card } = Astro.props;
+---
+
+<div class={`flex-card-container ${card.isReverse ? "-reverse" : ""}`}>
+  <img src={card.image} alt="" class="styled-image" />
+
+  <div class="content-wrapper">
+    <ComboTitle
+      headline={card.headline}
+      title={card.title}
+      shouldLeft
+      client:only="react"
+    />
+    <BaseText client:only="react">{card.text}</BaseText>
+    <BaseText client:only="react">{card.addition}</BaseText>
+  </div>
+</div>
+
+<style>
+  .flex-card-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-card-container.-reverse {
+    flex-direction: row-reverse;
+  }
+  .styled-image {
+    width: 40%;
+  }
+  .content-wrapper {
+    width: 55%;
+    display: grid;
+    margin: auto 0;
+    gap: 30px;
+  }
+</style>

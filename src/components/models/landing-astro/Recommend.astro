@@ -1,0 +1,15 @@
+---
+import FlexCard from "../../uis/FlexCard.astro";
+import { recommends } from "../../../functions/constants/recommends";
+import { BaseContainer } from "../../../functions/themes";
+---
+
+<BaseContainer className="-white" client:only="react">
+  {
+    recommends.map((recommend) => (
+      <BaseContainer className="-white" client:only="react">
+        <FlexCard card={recommend} />
+      </BaseContainer>
+    ))
+  }
+</BaseContainer>

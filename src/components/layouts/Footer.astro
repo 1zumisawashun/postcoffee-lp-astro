@@ -1,0 +1,88 @@
+---
+import PostcoffeeLogo from "../../assets/images/image_postcoffee_logo.png";
+import FacebookLogo from "../../assets/images/image_sns_facebook.png";
+import InstagramLogo from "../../assets/images/image_sns_instagram.png";
+import TwitterLogo from "../../assets/images/image_sns_twitter.png";
+---
+
+<footer class="styled-footer">
+  <div class="styled-footer-wrapper">
+    <div class="gap-wrapper">
+      <img src={PostcoffeeLogo} alt="postcoffee-logo" class="styled-image" />
+
+      <div class="gap-wrapper -gap20">
+        <img src={InstagramLogo} alt="instagram" class="styled-icon" />
+        <img src={FacebookLogo} alt="facebook" class="styled-icon" />
+        <img src={TwitterLogo} alt="twitter" class="styled-icon" />
+      </div>
+
+      <div class="gap-wrapper -gap20">
+        <a class="link-item">採用情報</a>
+        <a class="link-item">プレスキット</a>
+        <a class="link-item">取材に関するお問い合わせ</a>
+        <a class="link-item">ご利用規約</a>
+        <a class="link-item">プライバシーポリシー</a>
+        <a class="link-item">特定商取引法に関する表記</a>
+        <a class="link-item">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    Copyright © 2020 PostCoffee Co. All rights reserved.
+  </div>
+</footer>
+
+<style>
+  .styled-footer {
+    width: 100%;
+    height: 200px;
+    background-color: #f1f1f1;
+    display: grid;
+  }
+  .styled-footer-wrapper {
+    max-width: 1200px;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .styled-image {
+    width: auto;
+    height: 40px;
+  }
+  .styled-image:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .gap-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .gap-wrapper.-gap20 {
+    gap: 20px;
+  }
+  .link-item {
+    font-size: 14px;
+    display: block;
+  }
+  .link-item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .styled-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .styled-icon:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .copyright {
+    width: 20%;
+    margin: 0 auto;
+    color: gray;
+    font-weight: bold;
+    font-size: 10px;
+  }
+</style>
