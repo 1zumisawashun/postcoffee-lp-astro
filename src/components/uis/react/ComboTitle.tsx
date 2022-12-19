@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { BaseTitle, BaseText } from "../../functions/themes";
+import { BaseTitle, BaseText } from "../../../functions/themes";
 
 export type ComboTitleProps = {
   headline: string;
