@@ -13,7 +13,12 @@ const PanelItems = [
 
 <div class="base-container -white">
   <div class="product-container">
-    <img src={PostcoffeeBox} alt="postcoffee-box" class="styled-image" />
+    <img
+      src={PostcoffeeBox}
+      alt="postcoffee-box"
+      class="styled-image"
+      loading="lazy"
+    />
 
     <div class="product-content">
       <ComboTitle
@@ -30,7 +35,12 @@ const PanelItems = [
         {
           PanelItems.map((item) => (
             <div class="panel-item">
-              <img src={Check} alt="" class="styled-icon" />
+              <img
+                src={Check}
+                alt="image-check"
+                class="styled-icon"
+                loading="lazy"
+              />
               {item}
             </div>
           ))

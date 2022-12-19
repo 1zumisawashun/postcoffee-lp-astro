@@ -13,7 +13,7 @@ export const MediaCard: React.FC<MediaCardProps> = ({ media }) => {
       <BaseTitle className="-sub">{media.text}</BaseTitle>
       <Line></Line>
       <div>
-        <img src={media.image} alt={media.name} />
+        <img src={media.image} alt={media.name} loading="lazy" />
       </div>
     </GapWrapper>
   );

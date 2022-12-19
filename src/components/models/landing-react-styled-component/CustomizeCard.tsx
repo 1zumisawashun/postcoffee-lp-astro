@@ -13,7 +13,7 @@ export const CustomizeCard: React.FC<CustomizeCardProps> = ({ customize }) => {
       <ComboTitle headline={customize.headline} title={customize.title} />
 
       <div className="picture">
-        <img src={customize.image} alt="" />
+        <img src={customize.image} alt={customize.image} loading="lazy" />
       </div>
 
       <CustomizeWrapper>

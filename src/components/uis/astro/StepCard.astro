@@ -11,7 +11,12 @@ const { step } = Astro.props;
 <div class="step-card-container">
   <div class="flex-wrapper">
     <div icon-wrapper>
-      <img src={step.image} alt="" class="styled-icon" />
+      <img
+        src={step.image}
+        alt={step.image}
+        class="styled-icon"
+        loading="lazy"
+      />
     </div>
     <div class="content-wrapper">
       <p class="base-text -small">{step.headline}</p>

@@ -10,7 +10,7 @@ const { partner } = Astro.props;
 
 <div class="partner-card-container">
   <div>
-    <img src={partner.image} alt={partner.image} />
+    <img src={partner.image} alt={partner.image} loading="lazy" />
     <div class="content-wrapper">
       <p class="base-text">{partner.name}</p>
       <p class="base-text dotted-line-two">（{partner.prefecture}）</p>

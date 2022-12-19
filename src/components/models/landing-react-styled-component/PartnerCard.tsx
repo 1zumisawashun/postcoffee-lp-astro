@@ -10,7 +10,7 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
   return (
     <PartnerCardContainer>
       <div>
-        <img src={partner.image} alt={partner.image} />
+        <img src={partner.image} alt={partner.image} loading="lazy" />
         <ContentWrapper>
           <BaseText>{partner.name}</BaseText>
           <DottedLineTwo>（{partner.prefecture}）</DottedLineTwo>
