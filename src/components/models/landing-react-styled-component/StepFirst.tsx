@@ -11,8 +11,8 @@ export const StepFirst = () => {
   return (
     <BaseContainer>
       <StepWrapper>
-        {formatSteps.map((step) => (
-          <StepCard step={step} />
+        {formatSteps.map((step, index) => (
+          <StepCard step={step} key={index} />
         ))}
       </StepWrapper>
     </BaseContainer>

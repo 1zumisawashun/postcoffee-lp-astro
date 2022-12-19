@@ -13,7 +13,11 @@ import CustomizeCampaign from "./CustomizeCampaign.astro";
     />
 
     <div class="customize-card-container">
-      {customizes.map((customize) => <CustomizeCard customize={customize} />)}
+      {
+        customizes.map((customize, index) => (
+          <CustomizeCard customize={customize} />
+        ))
+      }
     </div>
 
     <ComboTitle

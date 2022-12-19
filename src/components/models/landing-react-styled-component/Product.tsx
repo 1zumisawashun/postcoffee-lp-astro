@@ -28,8 +28,8 @@ export const Product = () => {
           </BaseText>
 
           <PanelWrapper>
-            {PanelItems.map((item) => (
-              <PanelItem>
+            {PanelItems.map((item, index) => (
+              <PanelItem key={index}>
                 <StyledIcon src={Check} alt={Check} loading="lazy" />
                 {item}
               </PanelItem>

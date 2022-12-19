@@ -56,9 +56,9 @@ export const Media = () => {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        {medias.map((media) => {
+        {medias.map((media, index) => {
           return (
-            <SwiperSlide key={media.name}>
+            <SwiperSlide key={index}>
               <MediaCard media={media} />
             </SwiperSlide>
           );

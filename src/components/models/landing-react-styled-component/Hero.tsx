@@ -6,7 +6,12 @@ import { BaseTitle } from "../../../functions/themes";
 export const Hero = () => {
   return (
     <HeroContainer>
-      <StyledImage src={PostcoffeeHeader} alt="postcoffee-header" />
+      <StyledImage
+        src={PostcoffeeHeader}
+        alt="postcoffee-header"
+        width={1280}
+        height={720}
+      />
       <Block>
         <BaseTitle className="-sub">
           コーヒー診断であなたにぴったりのコーヒーが毎月届く

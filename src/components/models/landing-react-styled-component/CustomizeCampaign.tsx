@@ -16,7 +16,7 @@ export const CustomizeCampaign = () => {
       <CustomText>4つの特典</CustomText>
       <Block>
         {campaigns.map((campaign, index) => (
-          <Wrapper key={campaign}>
+          <Wrapper key={index}>
             <Panel>{`特典${index + 1}`}</Panel>
             <div className="message">{campaign}</div>
           </Wrapper>

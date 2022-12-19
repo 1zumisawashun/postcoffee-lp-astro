@@ -8,8 +8,8 @@ export const Notification = () => {
       <NotificationContainer>
         <Headline>メディア掲載情報</Headline>
         <ScrollPanel>
-          {notifications.map((notification) => (
-            <ContentWrapper>
+          {notifications.map((notification, index) => (
+            <ContentWrapper key={index}>
               <FlexWrapper>
                 <Block className="-w10">
                   <BaseText>{notification.createdAt}</BaseText>

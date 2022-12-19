@@ -37,9 +37,9 @@ export const Feedback = () => {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          {feedbacks.map((feedback) => {
+          {feedbacks.map((feedback, index) => {
             return (
-              <SwiperSlide key={feedback.name}>
+              <SwiperSlide key={index}>
                 <FeedbackCard feedback={feedback} />
               </SwiperSlide>
             );

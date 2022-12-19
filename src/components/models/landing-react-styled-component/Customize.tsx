@@ -15,8 +15,8 @@ export const Customize = () => {
         />
 
         <CustomizeCardContainer>
-          {customizes.map((customize) => (
-            <CustomizeCard customize={customize} />
+          {customizes.map((customize, index) => (
+            <CustomizeCard customize={customize} key={index} />
           ))}
         </CustomizeCardContainer>
 
