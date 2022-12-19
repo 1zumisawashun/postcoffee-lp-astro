@@ -11,7 +11,7 @@ export const StepCard: React.FC<StepCardProps> = ({ step }) => {
     <StepCardContainer>
       <FlexWrapper>
         <IconWrapper>
-          <StyledIcon src={step.image} alt="" />
+          <StyledIcon src={step.image} alt={step.image} loading="lazy" />
         </IconWrapper>
         <ContentWrapper>
           <BaseText className="-small">{step.headline}</BaseText>

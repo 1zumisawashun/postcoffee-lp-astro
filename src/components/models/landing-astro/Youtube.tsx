@@ -1,19 +1,44 @@
-import YouTube, { YouTubeProps } from "react-youtube";
+import { useState } from "react";
+import styled from "styled-components";
 
 export const Youtube = () => {
-  const onPlayerReady: YouTubeProps["onReady"] = (event) => {
-    // access to player in all event handlers via event.target
-    event.target.pauseVideo();
-  };
+  const [isThumbnail, setIsThumbnail] = useState(true);
+  const youtubeId = "y-eh4xx3jPQ";
 
-  const opts: YouTubeProps["opts"] = {
-    width: "100%",
-    height: "650",
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 0,
-    },
-  };
-
-  return <YouTube videoId="y-eh4xx3jPQ" opts={opts} onReady={onPlayerReady} />;
+  return (
+    <YoutubeContainer>
+      {isThumbnail ? (
+        <img
+          src={`https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`}
+          onClick={() => setIsThumbnail(false)}
+          alt="サムネイル"
+          width={600}
+          height={300}
+        />
+      ) : (
+        <iframe
+          src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          width={600}
+          height={300}
+        ></iframe>
+      )}
+    </YoutubeContainer>
+  );
 };
+
+const YoutubeContainer = styled.div`
+  width: 100%;
+  height: auto;
+  img {
+    width: 100%;
+    height: 560px;
+  }
+  iframe {
+    width: 100%;
+    height: 560px;
+  }
+`;

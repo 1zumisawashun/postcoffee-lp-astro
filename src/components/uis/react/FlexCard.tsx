@@ -10,7 +10,7 @@ export type FlexCardProps = {
 export const FlexCard: React.FC<FlexCardProps> = ({ card }) => {
   return (
     <FlexCardContainer reverse={card.isReverse}>
-      <StyledImage src={card.image} alt="" />
+      <StyledImage src={card.image} alt={card.image} loading="lazy" />
 
       <ContentWrapper>
         <ComboTitle headline={card.headline} title={card.title} shouldLeft />

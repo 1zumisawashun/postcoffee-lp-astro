@@ -13,7 +13,13 @@ export const Media = () => {
   const mediaImages = () => {
     const mediaImages = [];
     for (let i = 0; i < 22; i++) {
-      mediaImages.push(<StyledImage src="https://placehold.jp/100x60.png" />);
+      mediaImages.push(
+        <StyledImage
+          src="https://placehold.jp/100x60.png"
+          alt="media-image"
+          loading="lazy"
+        />
+      );
     }
     return mediaImages;
   };

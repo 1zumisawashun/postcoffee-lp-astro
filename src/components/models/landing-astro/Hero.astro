@@ -1,6 +1,6 @@
 ---
 import Button from "../../uis/astro/Button.astro";
-import PostcoffeeHeader from "../../../assets/images/image_postcoffee_header.jpeg";
+import PostcoffeeHeader from "/image_postcoffee_header.jpeg";
 ---
 
 <div class="hero-container">
@@ -8,7 +8,8 @@ import PostcoffeeHeader from "../../../assets/images/image_postcoffee_header.jpe
     src={PostcoffeeHeader}
     alt="postcoffee-header"
     class="styled-image"
-    loading="lazy"
+    width={600}
+    height={300}
   />
   <div class="block">
     <p class="base-title -sub">

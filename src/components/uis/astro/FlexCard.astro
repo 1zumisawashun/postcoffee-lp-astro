@@ -10,7 +10,14 @@ const { card } = Astro.props;
 ---
 
 <div class={`flex-card-container ${card.isReverse ? "-reverse" : ""}`}>
-  <img src={card.image} alt={card.image} class="styled-image" loading="lazy" />
+  <img
+    src={card.image}
+    alt={card.image}
+    class="styled-image"
+    loading="lazy"
+    width={600}
+    height={300}
+  />
 
   <div class="content-wrapper">
     <ComboTitle headline={card.headline} title={card.title} shouldLeft />

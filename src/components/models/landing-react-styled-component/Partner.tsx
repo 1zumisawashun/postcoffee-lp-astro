@@ -8,9 +8,13 @@ import RoasterBg from "../../../assets/images/image_roaster_bg.jpeg";
 export const Partner = () => {
   return (
     <PartnerContainer>
-      <StyledBgImage src={RoasterBg} alt="roaster-bg" />
+      <StyledBgImage src={RoasterBg} alt="roaster-bg" loading="lazy" />
       <Block>
-        <StyledImage src={RoasterPartnerLogo} alt="" />
+        <StyledImage
+          src={RoasterPartnerLogo}
+          alt="roaster-partner-logo"
+          loading="lazy"
+        />
         <BaseText className="-white -bold">
           世界中の有名ロースターがパートナーに参画し、世界中のコーヒーをあなたの好みを届けるサービスへとアップデート
         </BaseText>

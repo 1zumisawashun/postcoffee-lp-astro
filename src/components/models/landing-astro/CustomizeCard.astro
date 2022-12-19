@@ -13,7 +13,14 @@ const { customize } = Astro.props;
   <ComboTitle headline={customize.headline} title={customize.title} />
 
   <div>
-    <img src={customize.image} alt={customize.image} loading="lazy" />
+    <img
+      src={customize.image}
+      alt={customize.image}
+      loading="lazy"
+      width="600"
+      height="300"
+      class="styled-image"
+    />
   </div>
 
   <div class="customize-wrapper">
@@ -56,5 +63,9 @@ const { customize } = Astro.props;
     text-align: center;
     border: 1px solid black;
     padding: 10px;
+  }
+  .styled-image {
+    width: 100%;
+    height: auto;
   }
 </style>

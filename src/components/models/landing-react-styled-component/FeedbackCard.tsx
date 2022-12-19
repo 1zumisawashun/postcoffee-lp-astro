@@ -10,14 +10,13 @@ export const FeedbackCard: React.FC<FeedbackCardProps> = ({ feedback }) => {
   return (
     <FeedbackCardContainer>
       <GapWrapper>
-        <StyledImage src={feedback.image} alt="" />
+        <StyledImage src={feedback.image} alt={feedback.image} loading="lazy" />
         <Block>
           <StyledIcon
             src={feedback.avatar}
-            alt="lifehacker"
-            className="image"
+            alt={feedback.avatar}
+            loading="lazy"
           />
-
           <Name>{feedback.name}</Name>
         </Block>
         <DottedLineThree>{feedback.text}</DottedLineThree>

@@ -10,7 +10,14 @@ const { partner } = Astro.props;
 
 <div class="partner-card-container">
   <div>
-    <img src={partner.image} alt={partner.image} loading="lazy" />
+    <img
+      src={partner.image}
+      alt={partner.image}
+      loading="lazy"
+      width={600}
+      height={300}
+      class="styled-image"
+    />
     <div class="content-wrapper">
       <p class="base-text">{partner.name}</p>
       <p class="base-text dotted-line-two">（{partner.prefecture}）</p>
@@ -32,5 +39,9 @@ const { partner } = Astro.props;
   }
   .content-wrapper {
     height: 80px;
+  }
+  .styled-image {
+    width: 100%;
+    height: auto;
   }
 </style>

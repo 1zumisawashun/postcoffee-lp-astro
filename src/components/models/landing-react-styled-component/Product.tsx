@@ -14,7 +14,7 @@ export const Product = () => {
   return (
     <BaseContainer className="-white">
       <ProductContainer>
-        <StyledImage src={PostcoffeeBox} alt="postcoffee-box" />
+        <StyledImage src={PostcoffeeBox} alt="postcoffee-box" loading="lazy" />
 
         <ProductContent>
           <ComboTitle
@@ -30,7 +30,7 @@ export const Product = () => {
           <PanelWrapper>
             {PanelItems.map((item) => (
               <PanelItem>
-                <StyledIcon src={Check} alt="" />
+                <StyledIcon src={Check} alt={Check} loading="lazy" />
                 {item}
               </PanelItem>
             ))}
