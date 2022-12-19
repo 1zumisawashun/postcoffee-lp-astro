@@ -1,7 +1,6 @@
 ---
 import ComboTitle from "../../uis/astro/ComboTitle.astro";
 import type { Customize } from "../../../functions/types/Customize";
-import "../../../functions/styles/base-text.css";
 
 export interface Props {
   customize: Customize;
@@ -36,6 +35,7 @@ const { customize } = Astro.props;
 </div>
 
 <style>
+  @import "../../../functions/styles/base-text.css";
   .customize-card-container {
     width: 30%;
     height: 750px;

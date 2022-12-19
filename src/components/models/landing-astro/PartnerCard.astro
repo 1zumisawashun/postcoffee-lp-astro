@@ -1,6 +1,4 @@
 ---
-import "../../../functions/styles/base-text.css";
-import "../../../functions/styles/dotted-line.css";
 import type { Partner } from "../../../functions/types/Partner";
 
 export interface Props {
@@ -21,6 +19,8 @@ const { partner } = Astro.props;
 </div>
 
 <style>
+  @import "../../../functions/styles/base-text.css";
+  @import "../../../functions/styles/dotted-line.css";
   .partner-card-container {
     width: 20%;
     height: 250px;

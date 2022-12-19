@@ -3,7 +3,6 @@ import CustomizeCard from "./CustomizeCard.astro";
 import { customizes } from "../../../functions/constants/customizes";
 import ComboTitle from "../../uis/astro/ComboTitle.astro";
 import CustomizeCampaign from "./CustomizeCampaign.astro";
-import "../../../functions/styles/base-container.css";
 ---
 
 <div class="base-container">
@@ -27,6 +26,7 @@ import "../../../functions/styles/base-container.css";
 </div>
 
 <style>
+  @import "../../../functions/styles/base-container.css";
   .gap-wrapper {
     display: grid;
     gap: 30px;
