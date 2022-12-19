@@ -3,10 +3,9 @@ import CustomizeCard from "./CustomizeCard.astro";
 import { customizes } from "../../../functions/constants/customizes";
 import ComboTitle from "../../uis/astro/ComboTitle.astro";
 import CustomizeCampaign from "./CustomizeCampaign.astro";
-import { BaseContainer } from "../../../functions/themes";
 ---
 
-<BaseContainer>
+<div class="base-container">
   <div class="gap-wrapper">
     <ComboTitle
       headline="様々なコーヒーライフスタイルに"
@@ -24,9 +23,19 @@ import { BaseContainer } from "../../../functions/themes";
 
     <CustomizeCampaign />
   </div>
-</BaseContainer>
+</div>
 
 <style>
+  .base-container {
+    background-color: #f1f1f1;
+    padding: 30px;
+  }
+  .base-container.-white {
+    background-color: white;
+  }
+  .base-container.-center {
+    text-align: center;
+  }
   .gap-wrapper {
     display: grid;
     gap: 30px;

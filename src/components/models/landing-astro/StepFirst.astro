@@ -1,18 +1,27 @@
 ---
 import StepCard from "../../uis/astro/StepCard.astro";
 import { steps } from "../../../functions/constants/steps";
-import { BaseContainer } from "../../../functions/themes";
 
 const formatSteps = [steps[0], steps[1], steps[2], steps[3]];
 ---
 
-<BaseContainer client:only="react">
+<div class="base-container">
   <div class="step-wrapper">
     {formatSteps.map((step) => <StepCard step={step} />)}
   </div>
-</BaseContainer>
+</div>
 
 <style>
+  .base-container {
+    background-color: #f1f1f1;
+    padding: 30px;
+  }
+  .base-container.-white {
+    background-color: white;
+  }
+  .base-container.-center {
+    text-align: center;
+  }
   .step-wrapper {
     width: 90%;
     display: flex;

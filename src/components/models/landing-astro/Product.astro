@@ -3,7 +3,7 @@ import PostcoffeeBox from "../../../assets/images/image_postcoffee_box.png";
 import Check from "../../../assets/images/image_check.png";
 import Button from "../../uis/astro/Button.astro";
 import ComboTitle from "../../uis/astro/ComboTitle.astro";
-import { BaseText, BaseContainer } from "../../../functions/themes";
+import { BaseText } from "../../../functions/themes";
 
 const PanelItems = [
   "マグとお湯を用意するだけでOK！",
@@ -12,7 +12,7 @@ const PanelItems = [
 ];
 ---
 
-<BaseContainer className="-white" client:only="react">
+<div class="base-container -white">
   <div class="product-container">
     <img src={PostcoffeeBox} alt="postcoffee-box" class="styled-image" />
 
@@ -49,9 +49,19 @@ const PanelItems = [
       </Button>
     </div>
   </div>
-</BaseContainer>
+</div>
 
 <style>
+  .base-container {
+    background-color: #f1f1f1;
+    padding: 30px;
+  }
+  .base-container.-white {
+    background-color: white;
+  }
+  .base-container.-center {
+    text-align: center;
+  }
   .product-container {
     width: 90%;
     margin: auto;
