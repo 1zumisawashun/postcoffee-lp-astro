@@ -1,5 +1,5 @@
 ---
-import { Button } from "../../uis";
+import Button from "../../uis/astro/Button.astro";
 import PostcoffeeHeader from "../../../assets/images/image_postcoffee_header.jpeg";
 import { BaseTitle } from "../../../functions/themes";
 ---
@@ -16,7 +16,7 @@ import { BaseTitle } from "../../../functions/themes";
       パーソナライズコーヒーBOX
     </BaseTitle>
     <div>
-      <Button className="-large" client:only="react">無料でコーヒー診断</Button>
+      <Button large>無料でコーヒー診断</Button>
     </div>
   </div>
 </div>

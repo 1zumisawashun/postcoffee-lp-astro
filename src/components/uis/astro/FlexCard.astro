@@ -1,6 +1,6 @@
 ---
 import { BaseText } from "../../../functions/themes";
-import { ComboTitle } from "../";
+import ComboTitle from "./ComboTitle.astro";
 import type { FlexCardItem } from "../../../functions/types/Common";
 
 export interface Props {
@@ -14,12 +14,7 @@ const { card } = Astro.props;
   <img src={card.image} alt="" class="styled-image" />
 
   <div class="content-wrapper">
-    <ComboTitle
-      headline={card.headline}
-      title={card.title}
-      shouldLeft
-      client:only="react"
-    />
+    <ComboTitle headline={card.headline} title={card.title} shouldLeft />
     <BaseText client:only="react">{card.text}</BaseText>
     <BaseText client:only="react">{card.addition}</BaseText>
   </div>

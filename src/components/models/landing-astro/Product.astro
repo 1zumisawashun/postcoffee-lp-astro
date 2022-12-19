@@ -1,7 +1,8 @@
 ---
 import PostcoffeeBox from "../../../assets/images/image_postcoffee_box.png";
 import Check from "../../../assets/images/image_check.png";
-import { Button, ComboTitle } from "../../uis";
+import Button from "../../uis/astro/Button.astro";
+import ComboTitle from "../../uis/astro/ComboTitle.astro";
 import { BaseText, BaseContainer } from "../../../functions/themes";
 
 const PanelItems = [
@@ -20,7 +21,6 @@ const PanelItems = [
         headline="あなた専用のコーヒーボックス"
         title={`すぐにコーヒーライフを始めるためのオールインワンボックス\n診断から好みにあったコーヒーが3種類`}
         shouldLeft
-        client:only="react"
       />
 
       <BaseText className="-bold" client:only="react">
@@ -44,7 +44,7 @@ const PanelItems = [
         <BaseText client:only="react">（税込¥1,598~）</BaseText>
       </div>
 
-      <Button className="-fullwidth" client:only="react">
+      <Button fullwidth>
         1分であなた好みのコーヒー診断 <br />無料でコーヒーを診断
       </Button>
     </div>

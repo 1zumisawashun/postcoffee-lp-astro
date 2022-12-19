@@ -1,0 +1,36 @@
+---
+import { BaseTitle } from "../../../functions/themes";
+
+export interface Props {
+  headline: string;
+  title: string;
+  shouldLeft?: boolean;
+}
+
+const { headline, title, shouldLeft } = Astro.props;
+---
+
+<div class={`block ${shouldLeft ? "-shouldLeft" : ""}`}>
+  <p class={`headline ${shouldLeft ? "-shouldLeft" : ""}`}>{headline}</p>
+  <BaseTitle className="-sub" client:only="react">{title}</BaseTitle>
+</div>
+
+<style>
+  .block {
+    display: grid;
+    gap: 10px;
+    text-align: center;
+  }
+  .block.-shouldLeft {
+    text-align: left;
+  }
+  .headline {
+    font-size: 16px;
+    width: fit-content;
+    margin: auto;
+    border-bottom: 1px solid black;
+  }
+  .headline.-shouldLeft {
+    margin: inherit;
+  }
+</style>

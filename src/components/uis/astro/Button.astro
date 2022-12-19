@@ -1,0 +1,46 @@
+---
+export interface Props {
+  outlined?: boolean;
+  fullwidth?: boolean;
+  large?: boolean;
+}
+
+const { outlined, fullwidth, large } = Astro.props;
+---
+
+<button
+  class={`styled-button ${outlined ? "-outlined" : ""} ${
+    fullwidth ? "-fullwidth" : ""
+  } ${large ? "-large" : ""}`}
+>
+  <slot />
+</button>
+
+<style>
+  .styled-button {
+    display: inline-block;
+    padding: 0.5rem 0;
+    width: 11rem;
+    background: transparent;
+    color: white;
+    background: black;
+    border-radius: 30px;
+    border: 1px solid black;
+  }
+  .styled-button.-outlined {
+    background: white;
+    color: black;
+  }
+  .styled-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .styled-button.-large {
+    width: 15rem;
+    padding: 1rem 0.5rem;
+  }
+  .styled-button.-fullwidth {
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+</style>

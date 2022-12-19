@@ -1,7 +1,7 @@
 ---
 import CustomizeCard from "./CustomizeCard.astro";
 import { customizes } from "../../../functions/constants/customizes";
-import { ComboTitle } from "../../uis";
+import ComboTitle from "../../uis/astro/ComboTitle.astro";
 import CustomizeCampaign from "./CustomizeCampaign.astro";
 import { BaseContainer } from "../../../functions/themes";
 ---
@@ -11,7 +11,6 @@ import { BaseContainer } from "../../../functions/themes";
     <ComboTitle
       headline="様々なコーヒーライフスタイルに"
       title="例えばこんなカスタマイズ"
-      client:only="react"
     />
 
     <div class="customize-card-container">
@@ -21,7 +20,6 @@ import { BaseContainer } from "../../../functions/themes";
     <ComboTitle
       headline="すぐに始められるコーヒーライフ"
       title="あなたのカスタマイズで始めよう！"
-      client:only="react"
     />
 
     <CustomizeCampaign />

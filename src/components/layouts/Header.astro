@@ -2,7 +2,7 @@
 import PostcoffeeLogo from "../../assets/images/image_postcoffee_logo.png";
 import InstagramLogo from "../../assets/images/image_sns_instagram.png";
 import TwitterLogo from "../../assets/images/image_sns_twitter.png";
-import { Button } from "../uis";
+import Button from "../uis/astro/Button.astro";
 ---
 
 <header class="styled-header">
@@ -18,8 +18,8 @@ import { Button } from "../uis";
     </div>
 
     <div class="gap-wrapper">
-      <Button client:only="react" outlined>無料でコーヒー診断</Button>
-      <Button client:only="react">LOGIN</Button>
+      <Button outlined>無料でコーヒー診断</Button>
+      <Button>LOGIN</Button>
     </div>
   </div>
 </header>

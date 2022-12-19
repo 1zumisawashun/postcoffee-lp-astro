@@ -1,5 +1,5 @@
 ---
-import { Button } from "../../uis";
+import Button from "../../uis/astro/Button.astro";
 import { BaseTitle } from "../../../functions/themes";
 
 const campaigns = [
@@ -23,9 +23,7 @@ const campaigns = [
       ))
     }
   </div>
-  <Button className="-fullwidth" client:only="react"
-    >無料でコーヒー診断をする</Button
-  >
+  <Button fullwidth>無料でコーヒー診断をする</Button>
 </div>
 
 <style>
