@@ -1,6 +1,7 @@
 ---
 import StepCard from "../../uis/astro/StepCard.astro";
 import { steps } from "../../../functions/constants/steps";
+import "../../../functions/styles/base-container.css";
 
 const formatSteps = [steps[4], steps[5], steps[6], steps[7]];
 ---
@@ -12,16 +13,6 @@ const formatSteps = [steps[4], steps[5], steps[6], steps[7]];
 </div>
 
 <style>
-  .base-container {
-    background-color: #f1f1f1;
-    padding: 30px;
-  }
-  .base-container.-white {
-    background-color: white;
-  }
-  .base-container.-center {
-    text-align: center;
-  }
   .step-wrapper {
     width: 90%;
     display: flex;

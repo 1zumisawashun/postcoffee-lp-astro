@@ -3,7 +3,8 @@ import PostcoffeeBox from "../../../assets/images/image_postcoffee_box.png";
 import Check from "../../../assets/images/image_check.png";
 import Button from "../../uis/astro/Button.astro";
 import ComboTitle from "../../uis/astro/ComboTitle.astro";
-import { BaseText } from "../../../functions/themes";
+import "../../../functions/styles/base-text.css";
+import "../../../functions/styles/base-container.css";
 
 const PanelItems = [
   "マグとお湯を用意するだけでOK！",
@@ -23,9 +24,9 @@ const PanelItems = [
         shouldLeft
       />
 
-      <BaseText className="-bold" client:only="react">
+      <p class="base-text -bold">
         好みに合わせて、豆の挽き方や頻度、分量、シュガー、ミルク（クリープ）などカスタマイズ！
-      </BaseText>
+      </p>
 
       <div class="panel-wrapper">
         {
@@ -41,7 +42,7 @@ const PanelItems = [
       <div class="price-wrapper">
         <p class="ship">送料無料</p>
         <p class="excluding-tax">¥1,480~</p>
-        <BaseText client:only="react">（税込¥1,598~）</BaseText>
+        <p class="base-text">（税込¥1,598~）</p>
       </div>
 
       <Button fullwidth>
@@ -52,16 +53,6 @@ const PanelItems = [
 </div>
 
 <style>
-  .base-container {
-    background-color: #f1f1f1;
-    padding: 30px;
-  }
-  .base-container.-white {
-    background-color: white;
-  }
-  .base-container.-center {
-    text-align: center;
-  }
   .product-container {
     width: 90%;
     margin: auto;

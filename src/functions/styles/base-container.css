@@ -1,0 +1,10 @@
+.base-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+}
+.base-container.-white {
+  background-color: white;
+}
+.base-container.-center {
+  text-align: center;
+}

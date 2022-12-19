@@ -1,25 +1,13 @@
 ---
 import FlexCard from "../../uis/astro/FlexCard.astro";
 import { stores } from "../../../functions/constants/stores";
+import "../../../functions/styles/base-container.css";
 ---
 
 {
   stores.map((store) => (
-    <div class="base-container -white" >
+    <div class="base-container -white">
       <FlexCard card={store} />
     </div>
   ))
 }
-
-<style>
-  .base-container {
-    background-color: #f1f1f1;
-    padding: 30px;
-  }
-  .base-container.-white {
-    background-color: white;
-  }
-  .base-container.-center {
-    text-align: center;
-  }
-</style>

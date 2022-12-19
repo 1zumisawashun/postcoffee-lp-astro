@@ -1,5 +1,6 @@
 ---
-import { BaseText, DottedLineTwo } from "../../../functions/themes";
+import "../../../functions/styles/base-text.css";
+import "../../../functions/styles/dotted-line.css";
 import type { Partner } from "../../../functions/types/Partner";
 
 export interface Props {
@@ -13,9 +14,8 @@ const { partner } = Astro.props;
   <div>
     <img src={partner.image} alt={partner.image} />
     <div class="content-wrapper">
-      <BaseText client:only="react">{partner.name}</BaseText>
-      <DottedLineTwo client:only="react">（{partner.prefecture}）</DottedLineTwo
-      >
+      <p class="base-text">{partner.name}</p>
+      <p class="base-text dotted-line-two">（{partner.prefecture}）</p>
     </div>
   </div>
 </div>

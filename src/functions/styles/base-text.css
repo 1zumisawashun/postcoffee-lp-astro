@@ -1,0 +1,13 @@
+.base-text {
+  font-size: 16px;
+  white-space: pre-wrap;
+}
+.base-text.-bold {
+  font-weight: bold;
+}
+.base-text.-white {
+  color: white;
+}
+.base-text.-small {
+  font-size: 14px;
+}

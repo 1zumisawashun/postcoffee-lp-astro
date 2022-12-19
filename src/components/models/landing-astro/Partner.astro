@@ -1,7 +1,7 @@
 ---
 import PartnerCard from "./PartnerCard.astro";
 import { partners } from "../../../functions/constants/partners";
-import { BaseText } from "../../../functions/themes";
+import "../../../functions/styles/base-text.css";
 import RoasterPartnerLogo from "../../../assets/images/image_roaster_partner_logo.png";
 import RoasterBg from "../../../assets/images/image_roaster_bg.jpeg";
 ---
@@ -10,12 +10,12 @@ import RoasterBg from "../../../assets/images/image_roaster_bg.jpeg";
   <img src={RoasterBg} alt="roaster-bg" class="styled-bg-image" />
   <div class="block">
     <img src={RoasterPartnerLogo} alt="" class="styled-image" />
-    <BaseText className="-white -bold" client:only="react">
+    <p class="base-text -white -bold">
       世界中の有名ロースターがパートナーに参画し、世界中のコーヒーをあなたの好みを届けるサービスへとアップデート
-    </BaseText>
-    <BaseText className="-white -bold" client:only="react">
+    </p>
+    <p class="base-text -white -bold">
       自宅でも日本全国、また、世界各地のロースターの味を楽しんでいただけるよう、ロースターパートナーに参画していただき、世界中のコーヒーからあなた好みを届けるサービスへとアップデートしました。第一弾となる今回は、日本の屈指のロースター10社から個性豊かなコーヒー豆を取り揃えています。
-    </BaseText>
+    </p>
     <div class="flex-wrapper">
       {partners.map((partner) => <PartnerCard partner={partner} />)}
     </div>

@@ -1,5 +1,6 @@
 ---
-import { BaseText } from "../../../functions/themes";
+import "../../../functions/styles/base-text.css";
+import "../../../functions/styles/base-container.css";
 import { notifications } from "../../../functions/constants/notifications";
 ---
 
@@ -12,12 +13,10 @@ import { notifications } from "../../../functions/constants/notifications";
           <div class="content-wrapper">
             <div class="flex-wrapper">
               <div class="block -w10">
-                <BaseText client:only="react">
-                  {notification.createdAt}
-                </BaseText>
+                <p class="base-text">{notification.createdAt}</p>
               </div>
               <div class="block -w80">
-                <BaseText client:only="react">{notification.text}</BaseText>
+                <p class="base-text">{notification.text}</p>
               </div>
             </div>
           </div>
@@ -28,16 +27,6 @@ import { notifications } from "../../../functions/constants/notifications";
 </div>
 
 <style>
-  .base-container {
-    background-color: #f1f1f1;
-    padding: 30px;
-  }
-  .base-container.-white {
-    background-color: white;
-  }
-  .base-container.-center {
-    text-align: center;
-  }
   .notification-container {
     width: 70%;
     height: auto;

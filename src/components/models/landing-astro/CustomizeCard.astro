@@ -1,7 +1,7 @@
 ---
 import ComboTitle from "../../uis/astro/ComboTitle.astro";
-import { BaseText } from "../../../functions/themes";
 import type { Customize } from "../../../functions/types/Customize";
+import "../../../functions/styles/base-text.css";
 
 export interface Props {
   customize: Customize;
@@ -19,21 +19,13 @@ const { customize } = Astro.props;
 
   <div class="customize-wrapper">
     <div>
-      <BaseText className="-small" client:only="react"
-        >{customize.custom1}</BaseText
-      >
-      <BaseText className="-small" client:only="react">+</BaseText>
-      <BaseText className="-small" client:only="react"
-        >{customize.custom2}</BaseText
-      >
-      <BaseText className="-small" client:only="react">+</BaseText>
-      <BaseText className="-small" client:only="react"
-        >{customize.custom3}</BaseText
-      >
-      <BaseText className="-small" client:only="react">+</BaseText>
-      <BaseText className="-small" client:only="react"
-        >{customize.custom4}</BaseText
-      >
+      <p class="base-text -small">{customize.custom1}</p>
+      <p class="base-text -small">+</p>
+      <p class="base-text -small">{customize.custom2}</p>
+      <p class="base-text -small">+</p>
+      <p class="base-text -small">{customize.custom3}</p>
+      <p class="base-text -small">+</p>
+      <p class="base-text -small">{customize.custom4}</p>
     </div>
 
     <div class="price">

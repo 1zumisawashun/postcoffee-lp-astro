@@ -1,0 +1,11 @@
+.base-title {
+  font-size: 40px;
+  font-weight: bold;
+  white-space: pre-wrap;
+}
+.base-title.-sub {
+  font-size: 25px;
+}
+.base-title.-normal {
+  font-weight: normal;
+}

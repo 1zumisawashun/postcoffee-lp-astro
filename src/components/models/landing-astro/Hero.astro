@@ -1,20 +1,20 @@
 ---
 import Button from "../../uis/astro/Button.astro";
 import PostcoffeeHeader from "../../../assets/images/image_postcoffee_header.jpeg";
-import { BaseTitle } from "../../../functions/themes";
+import "../../../functions/styles/base-title.css";
 ---
 
 <div class="hero-container">
   <img src={PostcoffeeHeader} alt="postcoffee-header" class="styled-image" />
   <div class="block">
-    <BaseTitle className="-sub" client:only="react">
+    <p class="base-title -sub">
       コーヒー診断であなたにぴったりのコーヒーが毎月届く
-    </BaseTitle>
-    <BaseTitle client:only="react">
+    </p>
+    <p class="base-title">
       コーヒーの定期便　
       <br />
       パーソナライズコーヒーBOX
-    </BaseTitle>
+    </p>
     <div>
       <Button large>無料でコーヒー診断</Button>
     </div>
