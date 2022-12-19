@@ -1,5 +1,4 @@
 ---
-import { BaseText } from "../../../functions/themes";
 import type { StepCardItem } from "../../../functions/types/Common";
 
 export interface Props {
@@ -15,13 +14,12 @@ const { step } = Astro.props;
       <img src={step.image} alt="" class="styled-icon" />
     </div>
     <div class="content-wrapper">
-      <BaseText className="-small" client:only="react">{step.headline}</BaseText
-      >
-      <BaseText className="-bold" client:only="react">{step.title}</BaseText>
+      <p class="base-text -small">{step.headline}</p>
+      <p class="base-text -bold">{step.title}</p>
     </div>
   </div>
   <div class="content-wrapper -right">
-    <BaseText className="-small" client:only="react">{step.text}</BaseText>
+    <p class="base-text -small">{step.text}</p>
   </div>
 </div>
 

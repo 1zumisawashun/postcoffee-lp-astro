@@ -1,5 +1,4 @@
 ---
-import { BaseTitle } from "../../../functions/themes";
 
 export interface Props {
   headline: string;
@@ -12,7 +11,7 @@ const { headline, title, shouldLeft } = Astro.props;
 
 <div class={`block ${shouldLeft ? "-shouldLeft" : ""}`}>
   <p class={`headline ${shouldLeft ? "-shouldLeft" : ""}`}>{headline}</p>
-  <BaseTitle className="-sub" client:only="react">{title}</BaseTitle>
+  <p class="base-title -sub">{title}</p>
 </div>
 
 <style>
