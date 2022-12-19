@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import { medias } from "../../../functions/constants/medias";
 import "swiper/css";
-import { BaseTitle, BaseContainer } from "../../../functions/themes";
+import { BaseContainer } from "../../../functions/themes";
 import { ComboTitle } from "../../uis";
+import { MediaCard } from "./MediaCard";
 
 SwiperCore.use([Autoplay]);
 
@@ -50,14 +51,7 @@ export const Media = () => {
         {medias.map((media) => {
           return (
             <SwiperSlide key={media.name}>
-              <GapWrapper>
-                <BaseTitle>{media.headline}</BaseTitle>
-                <BaseTitle className="-sub">{media.text}</BaseTitle>
-                <Line></Line>
-                <div>
-                  <img src={media.image} alt={media.name} />
-                </div>
-              </GapWrapper>
+              <MediaCard media={media} />
             </SwiperSlide>
           );
         })}
@@ -84,13 +78,4 @@ const StyledImage = styled.img`
 const CustomSwiper = styled(Swiper)`
   width: 90%;
   padding: 30px 0;
-`;
-const GapWrapper = styled.div`
-  display: inline-grid;
-  gap: 10px;
-`;
-const Line = styled.div`
-  border-right: 1px solid black;
-  width: 50%;
-  height: 50px;
 `;
