@@ -8,7 +8,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lighthouse:astro": "lighthouse http://localhost:3000/landing/astro --config-path=./custom-config.js",
+    "lighthouse:react": "lighthouse http://localhost:3000/landing/react-styled-component --config-path=./custom-config.js --view"
   },
   "dependencies": {
     "@astrojs/react": "^1.2.2",
