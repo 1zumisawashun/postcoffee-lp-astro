@@ -20,8 +20,8 @@ export const StepFirst = () => {
 };
 
 const StepWrapper = styled.div`
-  width: 90%;
+  width: 80%;
   display: flex;
   margin: auto;
-  gap: 2%;
+  justify-content: space-between;
 `;

@@ -6,9 +6,7 @@ export const Recommend = () => {
   return (
     <BaseContainer className="-white">
       {recommends.map((recommend, index) => (
-        <BaseContainer className="-white" key={index}>
-          <FlexCard card={recommend} />
-        </BaseContainer>
+        <FlexCard card={recommend} key={index} />
       ))}
     </BaseContainer>
   );

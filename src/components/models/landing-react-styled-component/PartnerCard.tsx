@@ -9,27 +9,36 @@ export type PartnerCardProps = {
 export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
   return (
     <PartnerCardContainer>
-      <div>
-        <img src={partner.image} alt={partner.image} loading="lazy" />
+      <PartnerCardWrapper>
+        <img
+          src={partner.image}
+          alt={partner.image}
+          loading="lazy"
+          width={160}
+          height={120}
+        />
         <ContentWrapper>
           <BaseText>{partner.name}</BaseText>
           <DottedLineTwo>（{partner.prefecture}）</DottedLineTwo>
         </ContentWrapper>
-      </div>
+      </PartnerCardWrapper>
     </PartnerCardContainer>
   );
 };
 
 const PartnerCardContainer = styled.div`
   width: 20%;
-  height: 250px;
   background-color: white;
   border: 1px solid black;
-  display: grid;
-  justify-content: center;
-  align-items: center;
 `;
-
 const ContentWrapper = styled.div`
   height: 80px;
+`;
+
+const PartnerCardWrapper = styled.div`
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 `;

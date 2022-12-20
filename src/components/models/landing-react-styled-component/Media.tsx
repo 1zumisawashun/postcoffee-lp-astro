@@ -14,11 +14,13 @@ export const Media = () => {
     const mediaImages = [];
     for (let i = 0; i < 22; i++) {
       mediaImages.push(
-        <StyledImage
-          src="https://placehold.jp/100x60.png"
-          alt="media-image"
-          loading="lazy"
-        />
+        <ImageWrapper>
+          <StyledImage
+            src="https://placehold.jp/160x120.png"
+            alt="media-image"
+            loading="lazy"
+          />
+        </ImageWrapper>
       );
     }
     return mediaImages;
@@ -70,16 +72,19 @@ export const Media = () => {
 const Medias = styled.div`
   width: 90%;
   margin: 0 auto;
-  padding: 30px 0;
   background-color: #f1f1f1;
   display: flex;
   flex-wrap: wrap;
-  gap: calc((100 - 15 * 6) / 5);
-  row-gap: 20px;
-  column-gap: 20px;
+  gap: 2%;
+  row-gap: 15px;
+`;
+const ImageWrapper = styled.div`
+  width: 15%;
+  height: auto;
 `;
 const StyledImage = styled.img`
-  width: 15%;
+  width: 100%;
+  height: auto;
 `;
 const CustomSwiper = styled(Swiper)`
   width: 90%;

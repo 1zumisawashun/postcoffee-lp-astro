@@ -17,8 +17,10 @@ export const CustomizeCampaign = () => {
       <Block>
         {campaigns.map((campaign, index) => (
           <Wrapper key={index}>
-            <Panel>{`特典${index + 1}`}</Panel>
-            <div className="message">{campaign}</div>
+            <Panel>
+              <BaseText className="-bold">{`特典${index + 1}`}</BaseText>
+            </Panel>
+            <BaseText>{campaign}</BaseText>
           </Wrapper>
         ))}
       </Block>
@@ -41,14 +43,13 @@ const Block = styled.div`
 `;
 const Wrapper = styled.div`
   width: 20%;
-  margin: 3% auto;
+  margin: 20px auto;
   background-color: white;
 `;
 const Panel = styled.div`
-  font-size: 15px;
-  font-weight: bold;
   background-color: #f1f1f1;
-  padding: 3% 0;
+  padding: 10px 0;
+  margin-bottom: 10px;
 `;
 
 const CustomText = styled(BaseText)`

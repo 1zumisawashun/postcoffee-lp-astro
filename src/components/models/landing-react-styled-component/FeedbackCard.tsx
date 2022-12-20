@@ -10,12 +10,20 @@ export const FeedbackCard: React.FC<FeedbackCardProps> = ({ feedback }) => {
   return (
     <FeedbackCardContainer>
       <GapWrapper>
-        <StyledImage src={feedback.image} alt={feedback.image} loading="lazy" />
+        <StyledImage
+          src={feedback.image}
+          alt={feedback.image}
+          loading="lazy"
+          width={240}
+          height={240}
+        />
         <Block>
           <StyledIcon
             src={feedback.avatar}
             alt={feedback.avatar}
             loading="lazy"
+            width={50}
+            height={50}
           />
           <Name>{feedback.name}</Name>
         </Block>

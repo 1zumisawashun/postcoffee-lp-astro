@@ -8,7 +8,14 @@ import RoasterBg from "../../../assets/images/image_roaster_bg.jpeg";
 export const Partner = () => {
   return (
     <PartnerContainer>
-      <StyledBgImage src={RoasterBg} alt="roaster-bg" loading="lazy" />
+      <StyledBgImage
+        src={RoasterBg}
+        alt="roaster-bg"
+        loading="lazy"
+        width={1280}
+        height={720}
+      />
+
       <Block>
         <StyledImage
           src={RoasterPartnerLogo}
@@ -21,6 +28,7 @@ export const Partner = () => {
         <BaseText className="-white -bold">
           自宅でも日本全国、また、世界各地のロースターの味を楽しんでいただけるよう、ロースターパートナーに参画していただき、世界中のコーヒーからあなた好みを届けるサービスへとアップデートしました。第一弾となる今回は、日本の屈指のロースター10社から個性豊かなコーヒー豆を取り揃えています。
         </BaseText>
+
         <FlexWrapper>
           {partners.map((partner, index) => (
             <PartnerCard partner={partner} key={index} />
@@ -41,7 +49,7 @@ const StyledBgImage = styled.img`
   margin-bottom: -10px;
 `;
 const StyledImage = styled.img`
-  width: 30%;
+  width: 20%;
   height: auto;
   margin: auto;
   object-fit: cover;
@@ -55,7 +63,7 @@ const Block = styled.div`
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   display: grid;
-  gap: 40px;
+  gap: 20px;
   text-align: center;
 `;
 const FlexWrapper = styled.div`

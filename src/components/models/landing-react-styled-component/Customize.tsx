@@ -25,7 +25,7 @@ export const Customize = () => {
           title="あなたのカスタマイズで始めよう！"
         />
 
-        <CustomizeCampaign></CustomizeCampaign>
+        <CustomizeCampaign />
       </GapWrapper>
     </BaseContainer>
   );
@@ -33,7 +33,7 @@ export const Customize = () => {
 
 const GapWrapper = styled.div`
   display: grid;
-  gap: 30px;
+  gap: 50px;
 `;
 const CustomizeCardContainer = styled.div`
   width: 90%;

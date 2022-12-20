@@ -12,12 +12,18 @@ export const CustomizeCard: React.FC<CustomizeCardProps> = ({ customize }) => {
     <CustomizeCardContainer>
       <ComboTitle headline={customize.headline} title={customize.title} />
 
-      <div className="picture">
-        <img src={customize.image} alt={customize.image} loading="lazy" />
-      </div>
+      <ImageWrapper>
+        <StyledImage
+          src={customize.image}
+          alt={customize.image}
+          loading="lazy"
+          width={320}
+          height={240}
+        />
+      </ImageWrapper>
 
       <CustomizeWrapper>
-        <div className="menu">
+        <div>
           <BaseText className="-small">{customize.custom1}</BaseText>
           <BaseText className="-small">+</BaseText>
           <BaseText className="-small">{customize.custom2}</BaseText>
@@ -27,10 +33,8 @@ export const CustomizeCard: React.FC<CustomizeCardProps> = ({ customize }) => {
           <BaseText className="-small">{customize.custom4}</BaseText>
         </div>
 
-        <div className="price">
-          <div className="excludingtax">{customize.priceExcludingTax}</div>
-          <div className="includingtax">{customize.priceIncludingTax}</div>
-        </div>
+        <ExcludingTax>{customize.priceExcludingTax}</ExcludingTax>
+        <BaseText>{customize.priceIncludingTax}</BaseText>
       </CustomizeWrapper>
     </CustomizeCardContainer>
   );
@@ -38,23 +42,27 @@ export const CustomizeCard: React.FC<CustomizeCardProps> = ({ customize }) => {
 
 const CustomizeCardContainer = styled.div`
   width: 30%;
-  height: 750px;
   padding: 30px;
   display: grid;
   gap: 30px;
   background-color: white;
 `;
-
-const ContentWrapper = styled.div`
-  width: 70%;
-  height: auto;
-  margin: 0 auto;
-  padding: 5% 0 0;
-`;
 const CustomizeWrapper = styled.div`
-  width: 80%;
-  margin: auto;
   text-align: center;
   border: 1px solid black;
-  padding: 10px;
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+`;
+const ImageWrapper = styled.div`
+  width: 100%;
+`;
+
+const ExcludingTax = styled.p`
+  font-weight: bold;
+  font-size: 30px;
+`;
+const StyledImage = styled.img`
+  width: 100%;
+  height: auto;
 `;

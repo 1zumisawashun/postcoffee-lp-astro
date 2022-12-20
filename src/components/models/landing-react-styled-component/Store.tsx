@@ -4,12 +4,10 @@ import { BaseContainer } from "../../../functions/themes";
 
 export const Store = () => {
   return (
-    <>
+    <BaseContainer className="-white">
       {stores.map((store, index) => (
-        <BaseContainer className="-white" key={index}>
-          <FlexCard card={store} />
-        </BaseContainer>
+        <FlexCard card={store} key={index} />
       ))}
-    </>
+    </BaseContainer>
   );
 };

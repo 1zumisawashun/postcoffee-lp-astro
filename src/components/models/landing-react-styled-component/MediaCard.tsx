@@ -12,15 +12,9 @@ export const MediaCard: React.FC<MediaCardProps> = ({ media }) => {
       <BaseTitle>{media.headline}</BaseTitle>
       <BaseTitle className="-sub">{media.text}</BaseTitle>
       <Line></Line>
-      <div>
-        <img
-          src={media.image}
-          alt={media.name}
-          loading="lazy"
-          width={600}
-          height={300}
-        />
-      </div>
+      <ImageWrapper>
+        <StyledImage src={media.image} alt={media.name} loading="lazy" />
+      </ImageWrapper>
     </GapWrapper>
   );
 };
@@ -33,4 +27,12 @@ const Line = styled.div`
   border-right: 1px solid black;
   width: 50%;
   height: 50px;
+`;
+const ImageWrapper = styled.div`
+  width: 30%;
+  margin: auto;
+`;
+const StyledImage = styled.img`
+  width: 100%;
+  height: auto;
 `;

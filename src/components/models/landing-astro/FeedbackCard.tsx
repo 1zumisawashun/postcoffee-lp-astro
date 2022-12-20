@@ -21,9 +21,9 @@ export const FeedbackCard: React.FC<FeedbackCardProps> = ({ feedback }) => {
           <StyledIcon
             src={feedback.avatar}
             alt={feedback.avatar}
+            loading="lazy"
             width={50}
             height={50}
-            loading="lazy"
           />
           <Name>{feedback.name}</Name>
         </Block>

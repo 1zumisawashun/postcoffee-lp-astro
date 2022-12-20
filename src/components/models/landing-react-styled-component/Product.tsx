@@ -14,7 +14,15 @@ export const Product = () => {
   return (
     <BaseContainer className="-white">
       <ProductContainer>
-        <StyledImage src={PostcoffeeBox} alt="postcoffee-box" loading="lazy" />
+        <ImageWrapper>
+          <img
+            src={PostcoffeeBox}
+            alt="postcoffee-box"
+            loading="lazy"
+            width={640}
+            height={480}
+          />
+        </ImageWrapper>
 
         <ProductContent>
           <ComboTitle
@@ -30,7 +38,9 @@ export const Product = () => {
           <PanelWrapper>
             {PanelItems.map((item, index) => (
               <PanelItem key={index}>
-                <StyledIcon src={Check} alt={Check} loading="lazy" />
+                <IconWrapper>
+                  <img src={Check} alt={Check} loading="lazy" />
+                </IconWrapper>
                 {item}
               </PanelItem>
             ))}
@@ -61,9 +71,13 @@ const ProductContainer = styled.div`
   justify-content: space-between;
   padding: 5%;
 `;
-const StyledImage = styled.img`
+
+const ImageWrapper = styled.div`
   width: 55%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const ProductContent = styled.div`
   width: 40%;
@@ -76,11 +90,14 @@ const PanelWrapper = styled.div`
   display: grid;
   gap: 10px;
 `;
-const StyledIcon = styled.img`
-  width: 15px;
-  height: 15px;
-  margin-right: 10px;
+const IconWrapper = styled.div`
+  width: 40px;
+  height: 40px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 `;
+
 const PanelItem = styled.div`
   font-size: 16px;
   font-weight: bold;

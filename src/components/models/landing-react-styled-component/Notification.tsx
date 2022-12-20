@@ -28,8 +28,7 @@ export const Notification = () => {
 
 const NotificationContainer = styled.div`
   width: 70%;
-  height: auto;
-  margin: 5% auto;
+  margin: auto;
 `;
 const ScrollPanel = styled.div`
   height: 500px;
@@ -37,7 +36,7 @@ const ScrollPanel = styled.div`
 `;
 const Headline = styled(BaseText)`
   width: fit-content;
-  margin: auto;
+  margin: 0 auto 20px;
   border-bottom: 1px solid black;
 `;
 const ContentWrapper = styled.div`

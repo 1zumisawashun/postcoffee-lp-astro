@@ -22,7 +22,7 @@ export const FlexCard: React.FC<FlexCardProps> = ({ card }) => {
 };
 
 const FlexCardContainer = styled.div<{ reverse: boolean }>`
-  width: 90%;
+  width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -33,7 +33,7 @@ const FlexCardContainer = styled.div<{ reverse: boolean }>`
     `};
 `;
 const StyledImage = styled.img`
-  width: 40%;
+  width: 35%;
 `;
 const ContentWrapper = styled.div`
   width: 55%;
