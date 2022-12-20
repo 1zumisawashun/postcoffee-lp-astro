@@ -15,7 +15,7 @@ export const Feedback = () => {
     loop: true,
     centeredSlides: true,
     autoplay: {
-      delay: 5000,
+      delay: 50000,
       disableOnInteraction: false,
     },
     pagination: {

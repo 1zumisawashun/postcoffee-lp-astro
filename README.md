@@ -9,12 +9,12 @@ POST COFFEE の LP クローンのリポジトリです。
 ウェブ制作側から Astro の紹介をされたので素振りで作成。
 2021 年 6 月入社時に POST COFFEE の LP クローンを作成していたので書き心地やパフォーマンスを比較するために作成する。
 
+結論として Astro のパフォーマンスが高かった。
+
 ## 環境
 
 - astro ^1.6.15
 - react ^18.2.0
-- react-youtube ^10.1.0
-- simplebar-react ^2.4.3
 - styled-components ^5.3.6
 - swiper ^8.4.5
 
@@ -50,6 +50,26 @@ http://localhost:3000/
 ## Troubleshoot
 
 - なし
+
+## 効果測定
+
+クローム拡張機能によるパフォーマンスの偏りを考慮して全てシークレットモードで測定
+
+![image](public/image_capture.png)
+
+### Astro
+
+https://googlechrome.github.io/lighthouse/viewer/?gist=fc2cf918c1d531f297250ccd64c788d6
+
+![image](https://user-images.githubusercontent.com/65071534/208611700-93a5bb0a-79f0-41bb-8c04-05ad6a1caabe.png)
+
+### Astro（React）
+
+https://googlechrome.github.io/lighthouse/viewer/?gist=dfc4d5988297f5777a673d0135bd7bd4
+
+### Vue.js
+
+https://googlechrome.github.io/lighthouse/viewer/?gist=ec007bf7fa5fc35e03ba5ff4605277a0
 
 ## その他ドキュメント
 
