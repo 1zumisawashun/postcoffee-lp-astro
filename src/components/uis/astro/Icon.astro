@@ -1,0 +1,26 @@
+---
+export interface Props {
+  src: string;
+  alt?: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<div class="icon-wrapper">
+  <img src={src} alt={alt || src} class="styled-icon" loading="lazy" />
+</div>
+
+<style>
+  .styled-icon {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  .icon-wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

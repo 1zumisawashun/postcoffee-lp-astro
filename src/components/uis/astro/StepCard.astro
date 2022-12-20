@@ -1,5 +1,6 @@
 ---
 import type { StepCardItem } from "../../../functions/types/Common";
+import Icon from "../../uis/astro/Icon.astro";
 
 export interface Props {
   step: StepCardItem;
@@ -9,49 +10,22 @@ const { step } = Astro.props;
 ---
 
 <div class="step-card-container">
-  <div class="flex-wrapper">
-    <div icon-wrapper>
-      <img
-        src={step.image}
-        alt={step.image}
-        class="styled-icon"
-        loading="lazy"
-        width={600}
-        height={300}
-      />
-    </div>
-    <div class="content-wrapper">
+  <div class="gap-wrapper">
+    <Icon src={step.image} alt={step.image} />
+    <div>
       <p class="base-text -small">{step.headline}</p>
       <p class="base-text -bold">{step.title}</p>
     </div>
-  </div>
-  <div class="content-wrapper -right">
     <p class="base-text -small">{step.text}</p>
   </div>
 </div>
 
 <style>
   .step-card-container {
-    width: 23%;
-  }
-  .flex-wrapper {
-    display: flex;
-    margin-bottom: 5px;
-  }
-  .styled-icon {
-    width: 30px;
-    height: 30px;
-  }
-  .icon-wrapper {
     width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  .content-wrapper {
-    width: 80%;
-  }
-  .content-wrapper.-right {
-    margin-left: auto;
+  .gap-wrapper {
+    display: grid;
+    gap: 5px;
   }
 </style>

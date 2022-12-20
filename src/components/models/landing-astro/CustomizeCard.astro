@@ -1,5 +1,6 @@
 ---
 import ComboTitle from "../../uis/astro/ComboTitle.astro";
+import Image from "../../uis/astro/Image.astro";
 import type { Customize } from "../../../functions/types/Customize";
 
 export interface Props {
@@ -12,14 +13,12 @@ const { customize } = Astro.props;
 <div class="customize-card-container">
   <ComboTitle headline={customize.headline} title={customize.title} />
 
-  <div>
-    <img
+  <div class="image-wrapper">
+    <Image
       src={customize.image}
       alt={customize.image}
-      loading="lazy"
-      width="600"
-      height="300"
-      class="styled-image"
+      width={320}
+      height={240}
     />
   </div>
 
@@ -34,10 +33,11 @@ const { customize } = Astro.props;
       <p class="base-text -small">{customize.custom4}</p>
     </div>
 
-    <div class="price">
-      <div class="excludingtax">{customize.priceExcludingTax}</div>
-      <div class="includingtax">{customize.priceIncludingTax}</div>
-    </div>
+    <p class="excluding-tax">
+      {customize.priceExcludingTax}
+    </p>
+
+    <p class="base-text">{customize.priceIncludingTax}</p>
   </div>
 </div>
 
@@ -45,27 +45,24 @@ const { customize } = Astro.props;
   @import "../../../functions/styles/base-text.css";
   .customize-card-container {
     width: 30%;
-    height: 750px;
     padding: 30px;
     display: grid;
     gap: 30px;
     background-color: white;
   }
-  .content-wrapper {
-    width: 70%;
-    height: auto;
-    margin: 0 auto;
-    padding: 5% 0 0;
-  }
   .customize-wrapper {
-    width: 80%;
-    margin: auto;
     text-align: center;
     border: 1px solid black;
-    padding: 10px;
+    padding: 30px;
+    display: grid;
+    gap: 30px;
   }
-  .styled-image {
+  .image-wrapper {
     width: 100%;
-    height: auto;
+    aspect-ratio: 5 / 3;
+  }
+  .excluding-tax {
+    font-weight: bold;
+    font-size: 30px;
   }
 </style>

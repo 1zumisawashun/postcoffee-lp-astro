@@ -1,0 +1,27 @@
+---
+export interface Props {
+  src: string;
+  alt?: string;
+  width: number;
+  height: number;
+  isHero?: boolean;
+}
+
+const { src, alt, width, height, isHero } = Astro.props;
+---
+
+<img
+  src={src}
+  alt={alt || src}
+  width={width}
+  height={height}
+  class="styled-image"
+  loading={isHero ? null : "lazy"}
+/>
+
+<style>
+  .styled-image {
+    width: 100%;
+    height: auto;
+  }
+</style>

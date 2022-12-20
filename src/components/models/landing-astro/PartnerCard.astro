@@ -1,6 +1,6 @@
 ---
 import type { Partner } from "../../../functions/types/Partner";
-
+import Image from "../../uis/astro/Image.astro";
 export interface Props {
   partner: Partner;
 }
@@ -9,15 +9,10 @@ const { partner } = Astro.props;
 ---
 
 <div class="partner-card-container">
-  <div>
-    <img
-      src={partner.image}
-      alt={partner.image}
-      loading="lazy"
-      width={600}
-      height={300}
-      class="styled-image"
-    />
+  <div class="partner-card-wrapper">
+    <div>
+      <Image src={partner.image} alt={partner.image} width={160} height={120} />
+    </div>
     <div class="content-wrapper">
       <p class="base-text">{partner.name}</p>
       <p class="base-text dotted-line-two">（{partner.prefecture}）</p>
@@ -30,18 +25,17 @@ const { partner } = Astro.props;
   @import "../../../functions/styles/dotted-line.css";
   .partner-card-container {
     width: 20%;
-    height: 250px;
     background-color: white;
     border: 1px solid black;
-    display: grid;
-    justify-content: center;
-    align-items: center;
   }
   .content-wrapper {
     height: 80px;
   }
-  .styled-image {
-    width: 100%;
-    height: auto;
+  .partner-card-wrapper {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
 </style>

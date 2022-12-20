@@ -1,26 +1,31 @@
 ---
-import PostcoffeeBox from "../../../assets/images/image_postcoffee_box.png";
+import PostcoffeeBox from "../../../assets/webp/image_postcoffee_box.webp";
 import Check from "../../../assets/images/image_check.png";
 import Button from "../../uis/astro/Button.astro";
 import ComboTitle from "../../uis/astro/ComboTitle.astro";
+import Image from "../../uis/astro/Image.astro";
+import Icon from "../../uis/astro/Icon.astro";
 
 const PanelItems = [
   "マグとお湯を用意するだけでOK！",
   "縛りなしでスキップも簡単！",
   "ずっと、全国送料無料！",
 ];
+
+const text =
+  "好みに合わせて、豆の挽き方や頻度、分量、シュガー、ミルク（クリープ）などカスタマイズ！";
 ---
 
 <div class="base-container -white">
   <div class="product-container">
-    <img
-      src={PostcoffeeBox}
-      alt="postcoffee-box"
-      class="styled-image"
-      loading="lazy"
-      width={600}
-      height={300}
-    />
+    <div class="image-wrapper">
+      <Image
+        src={PostcoffeeBox}
+        alt="postcoffee-box"
+        width={640}
+        height={480}
+      />
+    </div>
 
     <div class="product-content">
       <ComboTitle
@@ -29,22 +34,13 @@ const PanelItems = [
         shouldLeft
       />
 
-      <p class="base-text -bold">
-        好みに合わせて、豆の挽き方や頻度、分量、シュガー、ミルク（クリープ）などカスタマイズ！
-      </p>
+      <p class="base-text -bold">{text}</p>
 
       <div class="panel-wrapper">
         {
           PanelItems.map((item) => (
             <div class="panel-item">
-              <img
-                src={Check}
-                alt="image-check"
-                class="styled-icon"
-                loading="lazy"
-                width={600}
-                height={300}
-              />
+              <Icon src={Check} alt="image-check" />
               {item}
             </div>
           ))
@@ -76,11 +72,14 @@ const PanelItems = [
     justify-content: space-between;
     padding: 5%;
   }
-  .styled-image {
+  .image-wrapper {
     width: 55%;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .product-container {
+  .product-content {
     width: 40%;
     display: grid;
     gap: 20px;

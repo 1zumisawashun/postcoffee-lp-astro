@@ -1,6 +1,7 @@
 ---
 import ComboTitle from "./ComboTitle.astro";
 import type { FlexCardItem } from "../../../functions/types/Common";
+import Image from "../../uis/astro/Image.astro";
 
 export interface Props {
   card: FlexCardItem;
@@ -10,14 +11,9 @@ const { card } = Astro.props;
 ---
 
 <div class={`flex-card-container ${card.isReverse ? "-reverse" : ""}`}>
-  <img
-    src={card.image}
-    alt={card.image}
-    class="styled-image"
-    loading="lazy"
-    width={600}
-    height={300}
-  />
+  <div class="image-wrapper">
+    <Image src={card.image} alt={card.image} width={480} height={640} />
+  </div>
 
   <div class="content-wrapper">
     <ComboTitle headline={card.headline} title={card.title} shouldLeft />
@@ -28,7 +24,7 @@ const { card } = Astro.props;
 
 <style>
   .flex-card-container {
-    width: 90%;
+    width: 80%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -36,9 +32,10 @@ const { card } = Astro.props;
   .flex-card-container.-reverse {
     flex-direction: row-reverse;
   }
-  .styled-image {
-    width: 40%;
+  .image-wrapper {
+    width: 35%;
   }
+
   .content-wrapper {
     width: 55%;
     display: grid;

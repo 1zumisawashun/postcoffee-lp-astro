@@ -4,13 +4,7 @@ import { recommends } from "../../../functions/constants/recommends";
 ---
 
 <div class="base-container -white">
-  {
-    recommends.map((recommend) => (
-      <div class="base-container -white">
-        <FlexCard card={recommend} />
-      </div>
-    ))
-  }
+  {recommends.map((recommend) => <FlexCard card={recommend} />)}
 </div>
 
 <style>

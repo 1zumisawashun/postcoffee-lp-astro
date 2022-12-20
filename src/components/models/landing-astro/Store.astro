@@ -3,13 +3,9 @@ import FlexCard from "../../uis/astro/FlexCard.astro";
 import { stores } from "../../../functions/constants/stores";
 ---
 
-{
-  stores.map((store) => (
-    <div class="base-container -white">
-      <FlexCard card={store} />
-    </div>
-  ))
-}
+<div class="base-container -white">
+  {stores.map((store) => <FlexCard card={store} />)}
+</div>
 
 <style>
   @import "../../../functions/styles/base-container.css";

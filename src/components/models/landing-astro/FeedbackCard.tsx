@@ -14,16 +14,16 @@ export const FeedbackCard: React.FC<FeedbackCardProps> = ({ feedback }) => {
           src={feedback.image}
           alt={feedback.image}
           loading="lazy"
-          width={600}
-          height={300}
+          width={240}
+          height={240}
         />
         <Block>
           <StyledIcon
             src={feedback.avatar}
             alt={feedback.avatar}
+            width={50}
+            height={50}
             loading="lazy"
-            width={600}
-            height={300}
           />
           <Name>{feedback.name}</Name>
         </Block>

@@ -1,25 +1,22 @@
 ---
 import Button from "../../uis/astro/Button.astro";
 import PostcoffeeHeader from "/image_postcoffee_header.jpeg";
+
+const subTitle = "コーヒー診断であなたにぴったりのコーヒーが毎月届く";
+const title = `コーヒーの定期便\nパーソナライズコーヒーBOX`;
 ---
 
 <div class="hero-container">
   <img
     src={PostcoffeeHeader}
     alt="postcoffee-header"
-    class="styled-image"
+    class="styled-bg-image"
     width={1280}
     height={720}
   />
   <div class="block">
-    <p class="base-title -sub">
-      コーヒー診断であなたにぴったりのコーヒーが毎月届く
-    </p>
-    <p class="base-title">
-      コーヒーの定期便　
-      <br />
-      パーソナライズコーヒーBOX
-    </p>
+    <p class="base-title -sub">{subTitle}</p>
+    <p class="base-title">{title}</p>
     <div>
       <Button large>無料でコーヒー診断</Button>
     </div>
@@ -32,7 +29,7 @@ import PostcoffeeHeader from "/image_postcoffee_header.jpeg";
     padding: 90px 0 0 0;
     position: relative;
   }
-  .styled-image {
+  .styled-bg-image {
     width: 100%;
     height: calc(100vh - 90px);
     object-fit: cover;

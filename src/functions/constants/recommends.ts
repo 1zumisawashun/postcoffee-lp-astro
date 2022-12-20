@@ -1,6 +1,6 @@
 export const recommends = [
   {
-    image: "https://placehold.jp/450x500.png",
+    image: "https://placehold.jp/480x640.png",
     headline: "コーヒー好きのあなたへ",
     title: "なんとなくでコーヒーを飲んでいませんか？",
     text: "毎日コーヒーを入れて、毎日のようにコーヒーを飲むあなた。家で飲むコーヒー、適当に買っていませんか？せっかく飲むコーヒーだから、もっと美味しいコーヒーを飲んでコーヒータイムを豊にしてみましょう。きっといつもよりハッピーに過ごせるはず。私たちは、あなたのコーヒーライフをもっと美味しく、スマートにします。",
@@ -8,7 +8,7 @@ export const recommends = [
     isReverse: false,
   },
   {
-    image: "https://placehold.jp/450x500.png",
+    image: "https://placehold.jp/480x640.png",
     headline: "マンネリからの解放",
     title: "いろんなコーヒーを楽しむ壮大なコーヒージャーニー",
     text: "世界役15カ国から最高品質のスペシャリティコーヒーを厳選。そのほとんどが希少なコーヒーのために毎年の生産はわずかです。いつもあなたに美味しいコーヒーを届けることができるように、わたしたちは、これまでのデータ、フィードバックから最適な豆をセレクトしています。毎月どんなコーヒーが届くか楽しみになるはず",
@@ -16,7 +16,7 @@ export const recommends = [
     isReverse: true,
   },
   {
-    image: "https://placehold.jp/450x500.png",
+    image: "https://placehold.jp/480x640.png",
     headline: "簡単コーヒー診断",
     title: "約15万通りからあなた好みを導き出します",
     text: "あなたが好きなスイーツ、お酒、普段のライフスタイルなどから、あなた専用にコーヒーボックスをカスタマイズします。カスタマイズされるのはコーヒーの種類だけではなく淹れ方、飲み方、頻度、価格など様々。あなたに最適なコーヒライフが見つかるはず。",
@@ -24,7 +24,7 @@ export const recommends = [
     isReverse: false,
   },
   {
-    image: "https://placehold.jp/450x500.png",
+    image: "https://placehold.jp/480x640.png",
     headline: "あなた専用のコーヒーボックス",
     title: "3種類のコーヒーと飲み方に応じたオールインワン",
     text: "コーヒー診断からAIが導き出したコーヒー3種類、好みやカスタマイズに合わせて、フィルター、シュガー、ミルクがセットになって届きます。カスタマイズは変更可能。毎月自分の好きなように調整できます。",

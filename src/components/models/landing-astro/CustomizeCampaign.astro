@@ -11,13 +11,15 @@ const campaigns = [
 
 <div class="customize-campaign-container">
   <p class="base-title">月々¥1,480~（税込¥1,598~）</p>
-  <p class="custom-text">4つの特典</p>
+  <p class="base-text custom-text">4つの特典</p>
   <div class="block">
     {
       campaigns.map((campaign, index) => (
         <div class="wrapper">
-          <div class="panel">{`特典${index + 1}`}</div>
-          <div>{campaign}</div>
+          <div class="panel">
+            <p class="base-text -bold">{`特典${index + 1}`}</p>
+          </div>
+          <p class="base-text">{campaign}</p>
         </div>
       ))
     }
@@ -27,6 +29,7 @@ const campaigns = [
 
 <style>
   @import "../../../functions/styles/base-title.css";
+  @import "../../../functions/styles/base-text.css";
   .customize-campaign-container {
     width: 60%;
     margin: auto;
@@ -40,17 +43,15 @@ const campaigns = [
   }
   .wrapper {
     width: 20%;
-    margin: 3% auto;
+    margin: 20px auto;
     background-color: white;
   }
   .panel {
-    font-size: 15px;
-    font-weight: bold;
     background-color: #f1f1f1;
-    padding: 3% 0;
+    padding: 10px 0;
+    margin-bottom: 10px;
   }
   .custom-text {
-    font-size: 16px;
     padding: 10px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;

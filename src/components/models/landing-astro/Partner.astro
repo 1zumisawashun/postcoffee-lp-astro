@@ -2,17 +2,17 @@
 import PartnerCard from "./PartnerCard.astro";
 import { partners } from "../../../functions/constants/partners";
 import RoasterPartnerLogo from "../../../assets/images/image_roaster_partner_logo.png";
-import RoasterBg from "../../../assets/images/image_roaster_bg.jpeg";
+import RoasterBg from "../../../assets/webp/image_roaster_bg.webp";
 ---
 
 <div class="partner-container">
   <img
     src={RoasterBg}
     alt="roaster-bg"
+    width={1280}
+    height={720}
     class="styled-bg-image"
     loading="lazy"
-    width={600}
-    height={300}
   />
   <div class="block">
     <img
@@ -20,8 +20,6 @@ import RoasterBg from "../../../assets/images/image_roaster_bg.jpeg";
       alt="roaster-partner-logo"
       class="styled-image"
       loading="lazy"
-      width={600}
-      height={300}
     />
     <p class="base-text -white -bold">
       世界中の有名ロースターがパートナーに参画し、世界中のコーヒーをあなたの好みを届けるサービスへとアップデート
@@ -47,7 +45,7 @@ import RoasterBg from "../../../assets/images/image_roaster_bg.jpeg";
     margin-bottom: -10px;
   }
   .styled-image {
-    width: 30%;
+    width: 20%;
     height: auto;
     margin: auto;
     object-fit: cover;
@@ -61,7 +59,7 @@ import RoasterBg from "../../../assets/images/image_roaster_bg.jpeg";
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     display: grid;
-    gap: 40px;
+    gap: 20px;
     text-align: center;
   }
   .flex-wrapper {
