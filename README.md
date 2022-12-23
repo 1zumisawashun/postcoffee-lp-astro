@@ -4,12 +4,18 @@ POST COFFEE の LP クローンのリポジトリです。
 
 ## Overview
 
-- 2020 年 12 月
+- 2022 年 12 月
 
-ウェブ制作側から Astro の紹介をされたので素振りで作成。
-2021 年 6 月入社時に POST COFFEE の LP クローンを作成していたので書き心地やパフォーマンスを比較するために作成する。
+勉強会で Astro の紹介をされたので素振りのため作成。
+2021 年 6 月入社時に POST COFFEE の LP クローンを作成していたので書き心地やパフォーマンスを比較するために作成。
+クローン作成のためデプロイはしない。
+以下本家 URL。
 
-結論として Astro のパフォーマンスが高かった。
+https://postcoffee.co/
+
+結論として Astro が高パフォーマンス出すことがわかった。
+React + Astro も作成したがパフォーマンスはイマイチの結果となった（CSS in JS が原因？）
+2022 年 8 月にオープンしたばっかりなので今後の動向に注目する。
 
 ## 環境
 
@@ -53,9 +59,11 @@ http://localhost:3000/
 
 ## 効果測定
 
-クローム拡張機能によるパフォーマンスの偏りを考慮して全てシークレットモードで測定
+クローム拡張機能によるパフォーマンスの偏りを考慮して全てシークレットモードで測定する。
 
-![image](public/image_capture.png)
+- 比較先のリポジトリ
+
+https://github.com/1zumisawashun/postcoffee-lp-vue
 
 ### Astro
 
@@ -67,9 +75,13 @@ https://googlechrome.github.io/lighthouse/viewer/?gist=fc2cf918c1d531f297250ccd6
 
 https://googlechrome.github.io/lighthouse/viewer/?gist=dfc4d5988297f5777a673d0135bd7bd4
 
+![image](https://user-images.githubusercontent.com/65071534/209253726-93bda467-2a84-427f-8896-602fe6c9266e.png)
+
 ### Vue.js
 
 https://googlechrome.github.io/lighthouse/viewer/?gist=ec007bf7fa5fc35e03ba5ff4605277a0
+
+![image](https://user-images.githubusercontent.com/65071534/209253846-2ed19040-94dd-4d01-8ef1-753bce263c83.png)
 
 ## その他ドキュメント
 
